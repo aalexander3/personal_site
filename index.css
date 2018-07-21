@@ -1,0 +1,51 @@
+/* theme https://www.design-seeds.com/studio-hues/collage/color-collage-10/ */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Chonburi');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+
+
+body {
+  background: #91C6B6;
+  font-family: 'Open Sans';
+}
+
+h1 {
+  font-family: 'Black Han Sans';
+  font-size: 60px;
+  font-weight: lighter;
+
+}
+
+h1:hover {
+  /* color: white; */
+  transform: rotateX( 20deg ) rotateY( 360deg );
+  cursor: pointer;
+}
+
+h3 {
+  font-family: 'Black Han Sans';
+  font-size: 30px;
+  font-weight: lighter;
+  /* text-shadow: -1px 0 0px #FFADDA; */
+
+}
+
+.intro-header {
+  display: block;
+  text-align: center;
+  margin-top: 10rem;
+
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 30%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
