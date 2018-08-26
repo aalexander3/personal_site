@@ -1,0 +1,17 @@
+.nav-words {
+  font-size: 14px;
+  color: black;
+}
+
+.nav-words.icons {
+  font-size: 20px;
+  margin: 0 .3rem;
+}
+
+.nav-words.icons:hover {
+  color: blue;
+}
+
+.navbar {
+  margin: 1rem .3rem;
+}
