@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import { Button, Icon } from 'antd'
+import { Icon } from 'antd'
 import '../stylesheets/NavBar.css'
 
 

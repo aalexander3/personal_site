@@ -3,7 +3,7 @@ import React from 'react'
 const ProjectPage = props => {
 
   return (
-    <div>ProjectPAGE</div>
+    <div className="page">ProjectPAGE</div>
   )
 }
 
