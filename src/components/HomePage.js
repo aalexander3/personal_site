@@ -5,7 +5,7 @@ import PageCard from './PageCard'
 class HomePage extends Component {
 
   render(){
-    const { home } = this.props.home
+    const { home } = this.props
 
     return (
       <div className='home-page' >

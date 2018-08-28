@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const PageCard = props => {
   const { page } = props
@@ -7,6 +8,7 @@ const PageCard = props => {
     <div className="page-card">
       <h1>{page.headline}</h1>
       <h3>{page.description}</h3>
+      <Link to="/about" className="card-link">More about me</Link>
     </div>
   )
 }

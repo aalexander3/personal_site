@@ -15,7 +15,7 @@ class ContactPage extends Component {
     return (
       <div className='extra-contact'>
         <h4>Want to get in touch?</h4>
-        <p>e-mail: <span>aralx73@gmail.com</span></p>
+        <p>e-mail: <a href='mailto:aralx73@gmail.com'>aralx73@gmail.com</a></p>
         <div style={{display: 'flex', justifyContent:'space-evenly', flexDirection: 'row'}}>
           <a href="https://github.com/aalexander3" target="_blank" rel="noopener noreferrer">
             <Icon type="github" className='contact-icons' />

@@ -31,6 +31,10 @@
   font-size: 2rem;
 }
 
+.card-link {
+  text-decoration: underline;
+}
+
 .background {
   z-index: -1;
   position: absolute;
@@ -40,8 +44,6 @@
   width: 33%;
   background-color: #BFD0E6;
 }
-
-
 
 /* logo spinner */
 @keyframes App-logo-spin {
