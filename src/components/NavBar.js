@@ -34,11 +34,7 @@ class NavBar extends Component {
           <Icon type="bulb" className="nav-words icons" />
           {this.state.toggled ? <span className="nav-words">PROJECTS </span> : null}
         </Link>
-
-        <Link to='/contact'>
-          <Icon type="mail" className="nav-words icons" />
-          {this.state.toggled ? <span className="nav-words">CONTACT </span> : null}
-        </Link>
+        {!this.state.toggled ? <span style={{float: 'right', marginRight: '.3rem'}}>ARREN ALEXANDER</span> : null}
       </div>
     )
   }

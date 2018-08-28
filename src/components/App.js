@@ -10,14 +10,14 @@ import { Switch, Route } from 'react-router-dom'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className='app' >
         <NavBar />
         <Switch>
           <Route exact path='/' component={ HomePage } />
           <Route exact path='/about' component={ AboutPage } />
           <Route exact path='/projects' component={ ProjectPage } />
-          <Route exact path='/contact' component={ ContactPage } />
         </Switch>
+        <ContactPage />
       </div>
     );
   }

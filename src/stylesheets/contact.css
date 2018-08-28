@@ -1,0 +1,30 @@
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-row: 3;
+  grid-column: 2;
+  z-index: 1;
+  font-weight: bold;
+  border-top: solid #E9E9EA 1px;
+  border-left: solid #E9E9EA 1px;
+  border-right: solid #E9E9EA 1px;
+  background-color: white;
+}
+
+.extra-contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.extra-contact span {
+  font-weight: normal;
+}
+
+.contact-icons {
+  color: black;
+  font-size: 18px;
+}

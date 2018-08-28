@@ -9,9 +9,15 @@
 }
 
 .nav-words.icons:hover {
-  color: blue;
+  color: #BFD0E6;
 }
 
 .navbar {
-  margin: 1rem .3rem;
+  grid-row: 1;
+  grid-column: 1/4;
+  padding: 10px .3rem;
+  z-index: 3;
+  background-color: white;
+  color: black;
+  border-bottom: solid #E9E9EA 1px;
 }
