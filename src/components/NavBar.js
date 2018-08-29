@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import { Icon } from 'antd'
 import '../stylesheets/NavBar.css'
 
+import { handleAboutChange } from '../actions/actions'
 
 class NavBar extends Component {
 
@@ -26,8 +28,8 @@ class NavBar extends Component {
         </Link>
 
         <Link to="/about">
-          <Icon type="user" className="nav-words icons" />
-          {this.state.toggled ? <span className="nav-words">ABOUT </span> : null}
+          <Icon type="user" className="nav-words icons" data-name="about" onClick={this.props.handleAboutChange} />
+          {this.state.toggled ? <span className="nav-words" data-name="about" onClick={this.props.handleAboutChange}>ABOUT </span> : null}
         </Link>
 
         <Link to='/projects'>
@@ -40,4 +42,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar
+export default connect(null, { handleAboutChange })(NavBar)
