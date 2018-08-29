@@ -1,31 +1,29 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import '../stylesheets/aboutPage.css'
-
 import AboutCard from './AboutCard'
+import CoreInterest from './CoreInterest'
 
-class AboutPage extends Component {
+const AboutPage = props => {
 
-  whatPage = () => {
-    switch (this.props.display) {
+  const whatPage = () => {
+    switch (props.display) {
       case 'about':
-        return <AboutCard handleClick={ this.handleClick } />
+        return <AboutCard />
       case 'core':
-        return <h1>CORE INTERESTS</h1>
+        return <CoreInterest />
       case 'fast':
         return <h1>FAST FACTS</h1>
       default:
-        return <AboutCard handleClick={ this.handleClick } />
+        return <AboutCard />
     }
   }
 
-  render(){
-    return (
-      <div className="about-page">
-        {this.whatPage()}
-      </div>
-    )
-  }
+  return (
+    <div className="about-page">
+      {whatPage()}
+    </div>
+  )
 }
 
 const mapStateToProps = state => {

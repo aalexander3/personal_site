@@ -9,7 +9,18 @@ const homeState = {
 const aboutState = {
     bio: 'Full stack web developer and instructor with a passion for travel, music, and the outdoors.',
     bio2: 'I teach at the Flatiron School, helping students realize their own dreams of building with code. After studying music and literature, I too, discovered software development, and found their similarities in making creative decisions, constant practice, and the importance of having a beginner’s mindset.',
-    display: 'about'
+    display: 'about',
+    fastFacts: [
+
+    ],
+    coreInterests: [
+      {interest: 'climber', emoji: '🧗🏻‍♂️'},
+      {interest: 'musician', emoji: '🎸'},
+      {interest: 'developer', emoji: '💻'},
+      {interest: 'JavaScript junkie', emoji: '⚛️'},
+      {interest: 'world traveler', emoji: '🌍'},
+      {interest: 'beer & wine aficionado', emoji: '🍺'}
+    ]
 }
 
 const homeReducer = (state = homeState, action) => {
@@ -20,8 +31,6 @@ const homeReducer = (state = homeState, action) => {
 }
 
 const aboutReducer = (state = aboutState, action) => {
-  console.log('reducer', action)
-
   switch (action.type) {
     case "ABOUT_CHANGE":
       return { ...state, display: action.payload }

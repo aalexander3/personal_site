@@ -19,7 +19,6 @@ const AboutCard = props => {
   )
 }
 
-
 const mapStateToProps = state => {
   return {
     about: state.about
