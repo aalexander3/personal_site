@@ -44,7 +44,7 @@
   top: 35vh;
 }
 
-.core-interest h1 {
+.core-interests h1 {
   font-size: 1.5rem;
 }
 
@@ -57,13 +57,25 @@
   -webkit-filter: drop-shadow(.5rem .2rem .2rem rgba(244, 212, 54, 0.94));
 }
 
-
-
-/* .interest:hover + div {
-  transform: scale(1.2);
-  -webkit-filter: drop-shadow(.5rem .2rem .2rem pink);
-} */
-
 .interest-icon {
   width: 3rem;
+}
+
+.about-page-enter {
+  opacity: 0.01;
+  transform: scale(0.9) translateY(50%);
+}
+.about-page-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+  transition: all 300ms ease-out;
+}
+.about-page-exit {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+}
+.about-page-exit-active {
+  opacity: 0.01;
+  transform: scale(0.9) translateY(50%);
+  transition: all 300ms ease-out;
 }

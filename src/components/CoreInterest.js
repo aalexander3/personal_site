@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { handleAboutChange } from '../actions/actions'
+
 
 class CoreInterest extends Component {
 
@@ -16,7 +18,7 @@ class CoreInterest extends Component {
   mappedInterests = this.props.interests.map(int => {
     return (
       <div key={ int.interest } className='interest' onMouseOver={() => this.updateInt(int)}>
-        <img className="interest-icon" src={int.source} />
+        <img className="interest-icon" src={int.source} alt={int.interest} />
       </div>
     )
   })
@@ -24,10 +26,13 @@ class CoreInterest extends Component {
 
   render() {
     return (
-      <div className="core-interests">
-        <h1>{this.state.defaultInt}</h1>
-        <div className="mapped-interests">
-          {this.mappedInterests}
+      <div className="about-page">
+        <div className="left-nav" data-name='about' onClick={this.props.handleAboutChange}>About Me</div>
+        <div className="core-interests">
+          <h1>{this.state.defaultInt}</h1>
+          <div className="mapped-interests">
+            {this.mappedInterests}
+          </div>
         </div>
       </div>
     )
@@ -40,4 +45,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(CoreInterest)
+export default connect(mapStateToProps, { handleAboutChange })(CoreInterest)

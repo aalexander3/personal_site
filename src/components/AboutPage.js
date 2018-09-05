@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import '../stylesheets/aboutPage.css'
 import AboutCard from './AboutCard'
 import CoreInterest from './CoreInterest'
+import { CSSTransition } from 'react-transition-group';
 
 const AboutPage = props => {
 
@@ -19,11 +20,7 @@ const AboutPage = props => {
     }
   }
 
-  return (
-    <div className="about-page">
-      { whatPage() }
-    </div>
-  )
+  return whatPage()
 }
 
 const mapStateToProps = state => {

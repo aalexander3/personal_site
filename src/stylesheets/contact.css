@@ -12,6 +12,15 @@
   border-left: solid #E9E9EA 1px;
   border-right: solid #E9E9EA 1px;
   background-color: white;
+  transition: height .25s cubic-bezier(0, .25, 1, .75);
+}
+
+.open {
+  height: 130px;
+}
+
+.closed {
+  height: 40px;
 }
 
 .extra-contact {
@@ -19,6 +28,7 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+  transition: all .2s ease-in-out;
 }
 
 .contact-icons {
