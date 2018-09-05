@@ -48,23 +48,18 @@
   font-size: 1.5rem;
 }
 
+.interest {
+   transition: all .1s ease-in-out;
+}
+
 .interest:hover {
   transform: scale(1.5);
   -webkit-filter: drop-shadow(.5rem .2rem .2rem rgba(244, 212, 54, 0.94));
 }
 
-.interest:hover + div {
-  transform: scale(1.2);
-  -webkit-filter: drop-shadow(.5rem .2rem .2rem pink);
-}
 
-/* post processing lib axe?
-.interest:hover ? div {
-  transform: scale(1.2);
-  -webkit-filter: drop-shadow(.5rem .2rem .2rem pink);
-} */
 
-/* . + .interest:hover {
+/* .interest:hover + div {
   transform: scale(1.2);
   -webkit-filter: drop-shadow(.5rem .2rem .2rem pink);
 } */
