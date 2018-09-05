@@ -30,17 +30,45 @@
   transform: rotate(90deg);
 }
 
-.cylinder-container {
+.mapped-interests {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* position: relative;
+  top: 40%; */
 }
 
-.interest-tube {
-
+.core-interests {
+  text-align: center;
+  position: relative;
+  top: 35vh;
 }
 
-.cylinder {
-  position: absolute;
-  top: 10%;
-  left: 10%;
+.core-interest h1 {
+  font-size: 1.5rem;
+}
+
+.interest:hover {
+  transform: scale(1.5);
+  -webkit-filter: drop-shadow(.5rem .2rem .2rem rgba(244, 212, 54, 0.94));
+}
+
+.interest:hover + div {
+  transform: scale(1.2);
+  -webkit-filter: drop-shadow(.5rem .2rem .2rem pink);
+}
+
+/* post processing lib axe?
+.interest:hover ? div {
+  transform: scale(1.2);
+  -webkit-filter: drop-shadow(.5rem .2rem .2rem pink);
+} */
+
+/* . + .interest:hover {
+  transform: scale(1.2);
+  -webkit-filter: drop-shadow(.5rem .2rem .2rem pink);
+} */
+
+.interest-icon {
+  width: 3rem;
 }

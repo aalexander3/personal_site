@@ -21,7 +21,7 @@ const AboutPage = props => {
 
   return (
     <div className="about-page">
-      {whatPage()}
+      { whatPage() }
     </div>
   )
 }

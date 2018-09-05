@@ -15,16 +15,12 @@
 }
 
 .extra-contact {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.extra-contact span {
-  font-weight: normal;
+  justify-content: space-evenly;
+  flex-direction: row;
 }
 
 .contact-icons {
-  color: black;
-  font-size: 18px;
+  width: 2rem;
 }

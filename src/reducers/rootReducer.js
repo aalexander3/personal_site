@@ -14,12 +14,12 @@ const aboutState = {
 
     ],
     coreInterests: [
-      {interest: 'climber', emoji: '🧗🏻‍♂️'},
-      {interest: 'musician', emoji: '🎸'},
-      {interest: 'developer', emoji: '💻'},
-      {interest: 'JavaScript junkie', emoji: '⚛️'},
-      {interest: 'world traveler', emoji: '🌍'},
-      {interest: 'beer & wine aficionado', emoji: '🍺'}
+      { interest: 'I climb and hike', source: 'https://cdn2.iconfinder.com/data/icons/new-year-resolutions/64/resolutions-10-128.png' },
+      { interest: 'I\'m a musician', source: 'https://cdn2.iconfinder.com/data/icons/thesquid-ink-40-free-flat-icon-pack/64/gibson-les_paul_guitar_bass-128.png' },
+      { interest: 'I write interactive code', source: 'https://cdn2.iconfinder.com/data/icons/new-year-resolutions/64/resolutions-07-128.png' },
+      { interest: 'I run on caffeine', source: 'https://cdn0.iconfinder.com/data/icons/kitchen-49/128/Kitchen-36-128.png' },
+      { interest: 'I\'m a wannabe home chef', source: 'https://cdn0.iconfinder.com/data/icons/kitchen-49/128/Kitchen-28-128.png' },
+      { interest: 'I love to travel', source: 'https://cdn2.iconfinder.com/data/icons/new-year-resolutions/64/resolutions-21-128.png' }
     ]
 }
 

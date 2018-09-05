@@ -8,6 +8,18 @@ import NavBar from './NavBar'
 import { Switch, Route } from 'react-router-dom'
 
 class App extends Component {
+  state= {
+    active: false
+  }
+
+  handleClick = () => {
+    this.setState(prevState => {
+      return {
+        active: !prevState.active
+      }
+    })
+  }
+
   render() {
     return (
       <div className='app' >

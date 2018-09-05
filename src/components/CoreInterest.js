@@ -1,23 +1,37 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-const CoreInterest = props => {
-  const mappedInterests = props.interests.slice(0,4).map(int => {
+class CoreInterest extends Component {
+
+  state = {
+    defaultInt: "I write interactive code"
+  }
+
+  updateInt = int => {
+    this.setState({
+      defaultInt: int.interest
+    })
+  }
+
+  mappedInterests = this.props.interests.map(int => {
     return (
-    <div key={ int.interest } className='interest-tube'>
-      <h3>{ int.interest } { int.emoji }</h3>
-    </div>
+      <div key={ int.interest } className='interest' onMouseOver={() => this.updateInt(int)}>
+        <img className="interest-icon" src={int.source} />
+      </div>
     )
   })
 
-  return (
-    <div>
-      <img className="cylinder" alt='cylinder' src='https://vectr.com/aalexander/c3zOUyi2aZ.svg?width=300&height=300&select=c3zOUyi2aZpage0&source=page'></img>
-      <div className='cylinder-container'><h3>I'm a {props.interests[0].interest}</h3></div>
-      <button> - </button>
-      <button> + </button>
-    </div>
-  )
+
+  render() {
+    return (
+      <div className="core-interests">
+        <h1>{this.state.defaultInt}</h1>
+        <div className="mapped-interests">
+          {this.mappedInterests}
+        </div>
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = state => {
