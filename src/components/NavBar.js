@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { Icon } from 'antd'
 import '../stylesheets/NavBar.css'
 
-import { handleAboutChange } from '../actions/actions'
+import { showAbout } from '../actions/actions'
 
 class NavBar extends Component {
 
@@ -28,8 +28,8 @@ class NavBar extends Component {
         </Link>
 
         <Link to="/about">
-          <Icon type="user" className="nav-words icons" data-name="about" onClick={this.props.handleAboutChange} />
-          {this.state.toggled ? <span className="nav-words" data-name="about" onClick={this.props.handleAboutChange}>ABOUT </span> : null}
+          <Icon type="user" className="nav-words icons" data-name="about" onClick={this.props.showAbout} />
+          {this.state.toggled ? <span className="nav-words" data-name="about" onClick={this.props.showAbout}>ABOUT </span> : null}
         </Link>
 
         <Link to='/projects'>
@@ -42,4 +42,4 @@ class NavBar extends Component {
   }
 }
 
-export default connect(null, { handleAboutChange })(NavBar)
+export default connect(null, { showAbout })(NavBar)

@@ -10,7 +10,6 @@ class HomePage extends Component {
     return (
       <div className='home-page' >
         <PageCard page={ home } />
-        <div className='background'></div>
       </div>
     )
   }

@@ -1,20 +1,20 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { handleAboutChange } from '../actions/actions'
+import { showFast, showInterest } from '../actions/actions'
 
 const AboutCard = props => {
 
-  const { handleAboutChange } = props
+  const { showFast, showInterest } = props
   const { bio, bio2 } = props.about
 
   return (
     <div className="about-page">
-      <div className="left-nav" data-name='fast' onClick={handleAboutChange}>Fast Facts</div>
+      <div className="left-nav" data-name='fast' onClick={ showFast }>Fast Facts</div>
       <div className="about-card">
         <h1>{ bio }</h1>
         <h4>{ bio2 }</h4>
       </div>
-      <div className="right-nav" data-name='core' onClick={handleAboutChange}>Core Interests</div>
+      <div className="right-nav" data-name='core' onClick={showInterest}>Core Interests</div>
     </div>
   )
 }
@@ -25,4 +25,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { handleAboutChange })(AboutCard)
+export default connect(mapStateToProps, { showFast, showInterest })(AboutCard)

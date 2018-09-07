@@ -6,8 +6,8 @@
 
 .app {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-gap: 10px;
+  grid-template-columns: 12vw 72vw 12vw;
+  grid-gap: 2vw;
   grid-template-rows: 40px 1fr;
   min-height: 100vh;
   justify-content: center;
@@ -22,7 +22,7 @@
 }
 
 .page-card {
-  margin: 10% 10% 0% 10%;
+  margin: 16vh 10vh 0 3.5vh;
 }
 
 .page-card h1 {
@@ -36,13 +36,36 @@
 }
 
 .background {
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   right: 0;
   top: 0;
-  bottom: 0;
-  width: 60%;
+  height: 23vh;
+  bottom: 77vh;
+  width: 100%;
   background: url(https://wallpapertag.com/wallpaper/full/b/7/3/271164-watercolor-background-2472x1856-for-htc.jpg);
+  /* box-shadow: 0px 1px lightgrey; */
+  transition: height .15s linear;
+}
+
+.profile-image {
+  position: absolute;
+  width: 20vh;
+  right: 3.5vh;
+  top: 13vh;
+  border-radius: 100%;
+  border: solid lightgrey 1px;
+  transition: width .15s linear;
+}
+
+.background.small {
+  height: 15vh;
+  bottom: 85vh;
+}
+
+.profile-image.small {
+  top: 6.5vh;
+  width: 7vh;
 }
 
 /* logo spinner */

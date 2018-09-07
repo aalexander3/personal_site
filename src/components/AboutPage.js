@@ -3,7 +3,9 @@ import { connect } from 'react-redux'
 import '../stylesheets/aboutPage.css'
 import AboutCard from './AboutCard'
 import CoreInterest from './CoreInterest'
-import { CSSTransition } from 'react-transition-group';
+// import { CSSTransition } from 'react-transition-group';
+import FastFacts from './FastFacts'
+
 
 const AboutPage = props => {
 
@@ -14,17 +16,22 @@ const AboutPage = props => {
       case 'core':
         return <CoreInterest />
       case 'fast':
-        return <h1>FAST FACTS</h1>
+        return <FastFacts />
       default:
         return <AboutCard />
     }
   }
 
-  return whatPage()
+  return (
+    <div className="about-page">
+      { whatPage() }
+    </div>
+    )
 }
 
 const mapStateToProps = state => {
-  return { display: state.about.display }
+  let { display } = state.about
+  return { display }
 }
 
 export default connect(mapStateToProps)(AboutPage)

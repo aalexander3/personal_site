@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { handleAboutChange } from '../actions/actions'
+import { showAbout } from '../actions/actions'
 
 
 class CoreInterest extends Component {
@@ -23,11 +23,10 @@ class CoreInterest extends Component {
     )
   })
 
-
   render() {
     return (
       <div className="about-page">
-        <div className="left-nav" data-name='about' onClick={this.props.handleAboutChange}>About Me</div>
+        <div className="left-nav" data-name='about' onClick={this.props.showAbout}>About Me</div>
         <div className="core-interests">
           <h1>{this.state.defaultInt}</h1>
           <div className="mapped-interests">
@@ -45,4 +44,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { handleAboutChange })(CoreInterest)
+export default connect(mapStateToProps, { showAbout })(CoreInterest)
