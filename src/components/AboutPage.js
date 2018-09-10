@@ -15,8 +15,8 @@ const AboutPage = props => {
         return <AboutCard />
       case 'core':
         return <CoreInterest />
-      case 'fast':
-        return <FastFacts />
+      // case 'fast':
+      //   return <FastFacts />
       default:
         return <AboutCard />
     }

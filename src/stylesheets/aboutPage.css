@@ -33,9 +33,7 @@
 .mapped-interests {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  /* position: relative;
-  top: 40%; */
+  justify-content: space-between;
 }
 
 .core-interests {

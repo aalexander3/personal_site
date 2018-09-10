@@ -6,31 +6,40 @@ import { showAbout } from '../actions/actions'
 class CoreInterest extends Component {
 
   state = {
-    defaultInt: "I write interactive code"
+    defaultInt: {}
+  }
+
+  componentDidMount = () => {
+    this.updateInt(this.props.interests[2])
   }
 
   updateInt = int => {
     this.setState({
-      defaultInt: int.interest
+      defaultInt: int
     })
   }
 
-  mappedInterests = this.props.interests.map(int => {
-    return (
-      <div key={ int.interest } className='interest' onMouseOver={() => this.updateInt(int)}>
-        <img className="interest-icon" src={int.source} alt={int.interest} />
-      </div>
-    )
-  })
+  mappedInterests = () => {
+    let index = this.props.interests.indexOf(this.state.defaultInt)
+    let interests;
+    index === -1 ? interests = this.props.interests.slice(0,4) : interests = [...this.props.interests.slice(index), ...this.props.interests.slice(0,index)].slice(0,4)
+    return interests.map(int => {
+      return (
+        <div key={ int.interest } className='interest' onClick={() => this.updateInt(int)}>
+          <img className="interest-icon" src={int.source} alt={int.interest} />
+        </div>
+      )
+    })
+  }
 
   render() {
     return (
       <div className="about-page">
         <div className="left-nav" data-name='about' onClick={this.props.showAbout}>About Me</div>
         <div className="core-interests">
-          <h1>{this.state.defaultInt}</h1>
+          <h1>{this.state.defaultInt.interest}</h1>
           <div className="mapped-interests">
-            {this.mappedInterests}
+            {this.mappedInterests()}
           </div>
         </div>
       </div>

@@ -15,8 +15,15 @@ class App extends Component {
     return (
       <div className='app' >
         <NavBar />
-        <div className={pathname === '/' ? 'background' : 'background small'}></div>
-        <img className={pathname === '/' ? 'profile-image' : 'profile-image small'} alt="arren" src={require('../images/arren-cartoon.jpg')} />
+        <React.Fragment>
+          <div
+            className={pathname === '/' ? 'background' : 'background small'}>
+          </div>
+          <img
+            className={pathname === '/' ? 'profile-image' : 'profile-image small'}
+            alt="arren"
+            src={require('../images/arren-cartoon.jpg')} />
+        </React.Fragment>
         <Switch>
           <Route exact path='/' component={ HomePage } />
           <Route exact path='/about' component={ AboutPage } />

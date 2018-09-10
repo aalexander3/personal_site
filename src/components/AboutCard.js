@@ -9,7 +9,7 @@ const AboutCard = props => {
 
   return (
     <div className="about-page">
-      <div className="left-nav" data-name='fast' onClick={ showFast }>Fast Facts</div>
+      {/* <div className="left-nav" data-name='fast' onClick={ showFast }>Fast Facts</div> */}
       <div className="about-card">
         <h1>{ bio }</h1>
         <h4>{ bio2 }</h4>

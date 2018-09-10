@@ -44,7 +44,6 @@
   bottom: 77vh;
   width: 100%;
   background: url(https://wallpapertag.com/wallpaper/full/b/7/3/271164-watercolor-background-2472x1856-for-htc.jpg);
-  /* box-shadow: 0px 1px lightgrey; */
   transition: height .15s linear;
 }
 
@@ -64,7 +63,7 @@
 }
 
 .profile-image.small {
-  top: 6.5vh;
+  top: 6.9vh;
   width: 7vh;
 }
 
