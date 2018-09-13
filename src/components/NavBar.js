@@ -25,21 +25,16 @@ class NavBar extends Component {
           <span className={toggled ? "span horizontal open" : "span horizontal" } style={{paddingTop:'3px'}}>ARREN ALEXANDER</span>
         </div>
         <div className={toggled ? "navbar vertical open" : "navbar vertical"}>
-          <img src="https://static.thenounproject.com/png/153-200.png" alt="hamburger icon" onClick={this.toggleCollapsed}/>
+          <img src={toggled ? "https://cdn4.iconfinder.com/data/icons/user-interface-54/18/Reject-512.png":"https://static.thenounproject.com/png/153-200.png"} alt="hamburger icon" onClick={this.toggleCollapsed}/>
           <Link to="/">
-            <Icon type="home" className="nav-words icons" />
-            {toggled ? <span className="nav-words">HOME </span> : null}
+            {toggled ? <p className="nav-words">HOME </p> : <Icon type="home" className="nav-words icons" />}
           </Link>
           <Link to="/about">
-            <Icon type="user" className="nav-words icons" data-name="about" onClick={this.props.showAbout} />
-            {toggled ? <span className="nav-words" data-name="about" onClick={this.props.showAbout}>ABOUT </span> : null}
+            {toggled ? <p className="nav-words" data-name="about" onClick={this.props.showAbout}>ABOUT </p> : <Icon type="user" className="nav-words icons" data-name="about" onClick={this.props.showAbout} />}
           </Link>
-
           <Link to='/projects'>
-            <Icon type="bulb" className="nav-words icons" />
-            {toggled ? <span className="nav-words">PROJECTS </span> : null}
+            {toggled ? <p className="nav-words">PROJECTS </p> : <Icon type="bulb" className="nav-words icons" />}
           </Link>
-          {!toggled ? <span style={{float: 'right', paddingTop:'3px', marginRight: '.3rem'}}>ARREN ALEXANDER</span> : <span style={{float: 'right', paddingTop:'3px', marginRight: '.3rem'}}>A/A</span>}
         </div>
       </React.Fragment>
     )
