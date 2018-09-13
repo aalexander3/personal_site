@@ -5,14 +5,19 @@
   align-items: center;
   flex-direction: column;
   grid-row: 3;
-  grid-column: 2;
+  grid-column: 1/4;
   z-index: 1;
   font-weight: bold;
-  border-top: solid #E9E9EA 1px;
-  border-left: solid #E9E9EA 1px;
-  border-right: solid #E9E9EA 1px;
-  background-color: white;
+  border-top: solid #17202A 1px;
+  border-left: solid #17202A 1px;
+  border-right: solid #17202A 1px;
+  background-color: #17202A;
+  color: white;
   transition: height .25s cubic-bezier(0, .25, 1, .75);
+}
+
+.contact h3, h4 {
+  color: white;
 }
 
 .open {

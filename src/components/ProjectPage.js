@@ -10,7 +10,9 @@ const ProjectPage = props => {
 
 
   return (
-    <div className="project-page">{mappedProjects}</div>
+    <div className="project-page">
+      {mappedProjects}
+    </div>
   )
 }
 

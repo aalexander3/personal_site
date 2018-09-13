@@ -6,9 +6,9 @@ const ProjectCard = props => {
 
   return (
     <div className="project-card">
-      <h1>{name}</h1>
-      <p>{description}</p>
-      <img alt={name} src={require('../images/' + images[0])} />
+      <img alt={name} src={'/images/' + images[0]} />
+      <h1>{name.toUpperCase()}</h1>
+      <p><a href={github} target="_blank" rel="noopener noreferrer" >CODE</a> | <a href={demo} target="_blank" rel="noopener noreferrer" >DEMO</a></p>
     </div>
   )
 }

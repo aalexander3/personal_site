@@ -9,6 +9,11 @@ class HomePage extends Component {
 
     return (
       <div className='home-page' >
+        {/* <div className='background'></div> */}
+        <img
+          className='profile-image'
+          alt="arren"
+          src='/images/arren-cartoon.jpg' />
         <PageCard page={ home } />
       </div>
     )

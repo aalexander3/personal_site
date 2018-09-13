@@ -6,7 +6,7 @@
 
 .app {
   display: grid;
-  grid-template-columns: 12vw 72vw 12vw;
+  grid-template-columns: 10vw 10fr 1fr;
   grid-gap: 2vw;
   grid-template-rows: 40px 1fr;
   min-height: 100vh;
@@ -40,14 +40,14 @@
   position: absolute;
   right: 0;
   top: 0;
-  height: 23vh;
-  bottom: 77vh;
-  width: 100%;
-  background: url(https://wallpapertag.com/wallpaper/full/b/7/3/271164-watercolor-background-2472x1856-for-htc.jpg);
+  bottom: 0;
+  width: 40%;
+  background: #2C3E50;
   transition: height .15s linear;
 }
 
 .profile-image {
+  z-index: 2;
   position: absolute;
   width: 20vh;
   right: 3.5vh;
@@ -57,15 +57,21 @@
   transition: width .15s linear;
 }
 
-.background.small {
+.background.left{
+  left: 0;
+  z-index: -99;
+}
+
+/* .background.small {
   height: 15vh;
   bottom: 85vh;
 }
 
+
 .profile-image.small {
   top: 6.9vh;
   width: 7vh;
-}
+} */
 
 /* logo spinner */
 @keyframes App-logo-spin {
