@@ -22,7 +22,7 @@ class CoreInterest extends Component {
   mappedInterests = () => {
     let index = this.props.interests.indexOf(this.state.defaultInt)
     let interests;
-    index === -1 ? interests = this.props.interests.slice(0,4) : interests = [...this.props.interests.slice(index), ...this.props.interests.slice(0,index)].slice(0,4)
+    index === -1 ? interests = this.props.interests : interests = [...this.props.interests.slice(index), ...this.props.interests.slice(0,index)]
     return interests.map(int => {
       return (
         <div key={ int.interest } className='interest' onClick={() => this.updateInt(int)}>
@@ -35,7 +35,7 @@ class CoreInterest extends Component {
   render() {
     return (
       <div className="about-page">
-        <div className="left-nav" data-name='about' onClick={this.props.showAbout}>About Me</div>
+        <div className="right-nav" data-name='about' onClick={this.props.showAbout}>About Me</div>
         <div className="core-interests">
           <h1>{this.state.defaultInt.interest}</h1>
           <div className="mapped-interests">

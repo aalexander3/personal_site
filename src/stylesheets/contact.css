@@ -1,5 +1,8 @@
 
 .contact {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,9 +17,10 @@
   background-color: #17202A;
   color: white;
   transition: height .25s cubic-bezier(0, .25, 1, .75);
+  z-index: 100;
 }
 
-.contact h3, h4 {
+.contact h3, .contact h4 {
   color: white;
 }
 

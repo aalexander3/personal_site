@@ -8,11 +8,18 @@
   font-size: 25px;
 }
 
-.nav-words.icons:hover {
-  /* color: #BFD0E6; */
+.nav-words.active {
+  color: #AED6F1;
+  text-decoration: underline;
+}
+
+.nav-words:hover {
+  color: #AED6F1;
 }
 
 .navbar.vertical {
+  position: fixed;
+  height: 100vh;
   grid-row: 1/4;
   grid-column: 1;
   padding: 1vh 12px;
@@ -46,20 +53,24 @@
   filter: invert(100%);
 }
 
+.navbar.vertical img:hover {
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 5px white);
+}
+
 .navbar.horizontal {
   grid-row: 1;
   grid-column: 1/4;
   padding: 10px .3rem;
   z-index: 3;
-  background-color: #17202A;
-  color: white;
-  border-bottom: solid #17202A 1px;
+  background-color: white;
+  color: #17202A;
+  border-bottom: solid #17202A 3px;
   text-align: center;
 }
 
 .span.horizontal {
   position: absolute;
-  color: white;
   transform: translateX(-4rem);
   transition: all .25s cubic-bezier(0, .25, 1, .75);
 }

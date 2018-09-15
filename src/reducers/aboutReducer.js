@@ -10,7 +10,7 @@ const aboutState = {
       { interest: 'I run on caffeine', source: 'https://cdn0.iconfinder.com/data/icons/kitchen-49/128/Kitchen-36-128.png' },
       { interest: 'I\'m a wannabe home chef', source: 'https://cdn0.iconfinder.com/data/icons/kitchen-49/128/Kitchen-28-128.png' },
       { interest: 'I love to travel', source: 'https://cdn2.iconfinder.com/data/icons/new-year-resolutions/64/resolutions-21-128.png' },
-      // need a few more here
+      // need a few more here 12 total!!!
     ]
 }
 

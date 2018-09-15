@@ -9,10 +9,17 @@ const projectState = {
       images: ['ForecastVR-vr.png', 'ForecastVR-landing.png', 'ForecastVR-detail.png']
     },
     {
-      name: "Forecast VR",
+      name: "Investr",
+      description: 'Investr is a React, Redux, and Rails application that pairs investors with startups looking for funding. The startup data was scraped from Angel\'s List. The Real-time messaging feature was implemented with Action Cable.',
+      github: 'https://github.com/aalexander3/venture-time-frontend',
+      demo: null,
+      images: ['ForecastVR-vr.png', 'ForecastVR-landing.png', 'ForecastVR-detail.png']
+    },
+    {
+      name: "Wantr",
       description: 'Forecast VR is a React, Redux, and AFrame web application that renders a virtual reality representation of current conditions of 21 major cities around the world. The application uses the Dark Sky API for its source of weather information.',
       github: 'https://github.com/aalexander3/forecast-vr-frontend',
-      demo: 'http://forecast-vr.herokuapp.com/',
+      demo: null,
       images: ['ForecastVR-vr.png', 'ForecastVR-landing.png', 'ForecastVR-detail.png']
     },
   ],

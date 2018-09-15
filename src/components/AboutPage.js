@@ -4,7 +4,7 @@ import '../stylesheets/aboutPage.css'
 import AboutCard from './AboutCard'
 import CoreInterest from './CoreInterest'
 // import { CSSTransition } from 'react-transition-group';
-import FastFacts from './FastFacts'
+// import FastFacts from './FastFacts'
 
 
 const AboutPage = props => {
