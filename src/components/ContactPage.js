@@ -34,6 +34,7 @@ class ContactPage extends Component {
       <footer
         className={this.state.toggled ? "contact open" : "contact closed"}
         onClick={this.toggleInfo}
+        onMouseLeave={() => this.setState({ toggled: false })} 
         >
         <h3 style={this.state.toggled ? {textDecoration: 'underline'} : null}>contact</h3>
         {this.state.toggled ? <h4>Want to get in touch?</h4> : null}

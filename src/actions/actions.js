@@ -18,3 +18,10 @@ export const showFast = () => {
     payload: { display: 'fast' }
   }
 }
+
+export const setDetail = (project) => {
+  return {
+    type: "SET_DETAIL",
+    payload: project
+  }
+}

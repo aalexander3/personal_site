@@ -18,6 +18,7 @@
   color: white;
   transition: height .25s cubic-bezier(0, .25, 1, .75);
   z-index: 100;
+  cursor: pointer;
 }
 
 .contact h3, .contact h4 {

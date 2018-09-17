@@ -6,7 +6,7 @@ import '../stylesheets/projectPage.css'
 
 const ProjectPage = props => {
 
-  const mappedProjects = props.projects.map(project => <ProjectCard key={project.name} project={project} />)
+  const mappedProjects = props.projects.map(project => <ProjectCard key={project.slug} project={project} />)
 
 
   return (

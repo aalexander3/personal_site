@@ -27,7 +27,7 @@ class NavBar extends Component {
         <div className="navbar horizontal">
           <span className={toggled ? "span horizontal open" : "span horizontal" } style={{paddingTop:'3px'}}>ARREN ALEXANDER</span>
         </div>
-        <div className={toggled ? "navbar vertical open" : "navbar vertical"}>
+        <div onMouseLeave={() => this.setState({ toggled: false })} className={toggled ? "navbar vertical open" : "navbar vertical"}>
           <img src={toggled ? "https://cdn4.iconfinder.com/data/icons/user-interface-54/18/Reject-512.png":"https://static.thenounproject.com/png/153-200.png"} alt="hamburger icon" onClick={this.toggleCollapsed}/>
           <Link to="/">
             {(toggled && path === '/') ? <p className="nav-words active"> HOME </p>

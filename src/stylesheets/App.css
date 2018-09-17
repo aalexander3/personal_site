@@ -6,7 +6,7 @@
 
 .app {
   display: grid;
-  grid-template-columns: 40px 10fr 1fr;
+  grid-template-columns: 50px 10fr 1fr;
   grid-gap: 4vw;
   grid-template-rows: 40px 1fr;
   min-height: 100vh;

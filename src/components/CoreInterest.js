@@ -20,12 +20,12 @@ class CoreInterest extends Component {
   }
 
   mappedInterests = () => {
-    let index = this.props.interests.indexOf(this.state.defaultInt)
-    let interests;
-    index === -1 ? interests = this.props.interests : interests = [...this.props.interests.slice(index), ...this.props.interests.slice(0,index)]
+
+    let { interests } = this.props
+    // index === -1 ? interests = this.props.interests : interests = [...this.props.interests.slice(index), ...this.props.interests.slice(0,index)]
     return interests.map(int => {
       return (
-        <div key={ int.interest } className='interest' onClick={() => this.updateInt(int)}>
+        <div key={ int.interest } className='interest' onMouseOver={() => this.updateInt(int)}>
           <img className="interest-icon" src={int.source} alt={int.interest} />
         </div>
       )
