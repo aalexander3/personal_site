@@ -11,10 +11,6 @@ class ProjectDetail extends Component {
   }
 
   trackMouse = e => {
-    // capture mouse position
-    // setState of left t/f based on position over div
-    // offsetWidth?
-
     let switchPoint = e.target.offsetWidth / 2
     if (e.screenX - 100 > switchPoint) {
       if (this.state.left) {
@@ -27,7 +23,11 @@ class ProjectDetail extends Component {
     }
   }
 
-  nextImage = () => {
+  triggerCarousel = () => {
+    this.state.left ? this.leftClick() : this.rightClick()
+  }
+
+  rightClick = () => {
     this.setState(prevState => {
       if (prevState.imageIndex === prevState.selectedProject.images.length - 1) {
         return {
@@ -45,10 +45,8 @@ class ProjectDetail extends Component {
     this.setState(prevState => {
       if (prevState.imageIndex === 0) {
         return {
-          imageIndex: 1
+          imageIndex: prevState.selectedProject.images.length - 1
         }
-      } else if (prevState.imageIndex === prevState.selectedProject.images.length - 1) {
-        return prevState
       } else {
         return {
           imageIndex: prevState.imageIndex - 1
@@ -64,13 +62,13 @@ class ProjectDetail extends Component {
 
     return (
       <div className="project-detail">
-        <div className={ this.state.left ? "carousel left" : "carousel" } onMouseMove={this.trackMouse} >
+        <div className={ this.state.left ? "carousel left" : "carousel" } onMouseMove={this.trackMouse} onClick={this.triggerCarousel} >
           <img className={imageIndex === 0 ? "carousel-image active" : imageIndex === 1 ? "carousel-image deactive" : "carousel-image doubleactive" }
-            alt={name} src={'/images/' + images[0]} onClick={this.nextImage}/>
+            alt={name} src={'/images/' + images[0]} />
           <img className={imageIndex === 0 ? "carousel-image active" : imageIndex === 1 ? "carousel-image deactive" : "carousel-image doubleactive" }
-             alt={name} src={'/images/' + images[1]} onClick={this.nextImage}/>
+             alt={name} src={'/images/' + images[1]} />
           <img className={imageIndex === 0 ? "carousel-image active" : imageIndex === 1 ? "carousel-image deactive" : "carousel-image doubleactive" }
-             alt={name} src={'/images/' + images[2]} onClick={this.nextImage}/>
+             alt={name} src={'/images/' + images[2]} />
         </div>
 
         <div className="project-info">
