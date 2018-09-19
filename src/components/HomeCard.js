@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const PageCard = props => {
+const HomeCard = props => {
   const { page } = props
 
   return (
@@ -13,4 +13,4 @@ const PageCard = props => {
   )
 }
 
-export default PageCard
+export default HomeCard

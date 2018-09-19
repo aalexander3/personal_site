@@ -108,9 +108,14 @@
 }
 
 .carousel {
-  /* cursor: pointer; */
+  cursor: url(/images/next_arrow.svg), auto;
+  /* cursor: cell; */
   /* custom cursor on the carousel ? */
   overflow: hidden;
   display: inline-flex;
   height: 70vh;
+}
+
+.carousel.left {
+  cursor: url(/images/left_arrow.svg), auto;
 }

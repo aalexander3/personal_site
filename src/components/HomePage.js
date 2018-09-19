@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import PageCard from './PageCard'
+import HomeCard from './HomeCard'
+import AboutPage from './AboutPage'
 
 class HomePage extends Component {
 
@@ -14,7 +15,7 @@ class HomePage extends Component {
           className='profile-image'
           alt="arren"
           src='/images/arren-cartoon.jpg' />
-        <PageCard page={ home } />
+        <HomeCard page={ home } />
       </div>
     )
   }
