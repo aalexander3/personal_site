@@ -4,7 +4,7 @@ import { showInterest } from '../actions/actions'
 
 const AboutCard = props => {
 
-  const { showFast, showInterest } = props
+  const { showInterest } = props
   const { bio, bio2 } = props.about
 
   return (

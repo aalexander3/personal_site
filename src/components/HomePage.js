@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import HomeCard from './HomeCard'
-import AboutPage from './AboutPage'
 
 class HomePage extends Component {
 
