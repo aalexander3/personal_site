@@ -10,9 +10,8 @@
 
 .project-detail {
   z-index: 1;
-  grid-row: 2;
+  grid-row: 1/3;
   grid-column: 2/4;
-  padding: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -51,6 +50,15 @@
 
 .project-info {
   width: 35%;
+  background: #17202A;
+  padding: 10vh 1vw;
+  color: white;
+  
+}
+
+.project-info h1, .project-info h4 {
+  color: white;
+  margin-bottom: 1rem;
 }
 
 .overlay {
@@ -81,7 +89,23 @@
   top: 30%;
 }
 
-.overlay a:hover {
+.project-info a {
+  color: white;
+  border: solid white 2px;
+  box-sizing: border-box;
+  padding: .75rem;
+  margin: 1vw;
+  width: 8vw;
+  text-align: center;
+}
+
+.project-info a:hover {
+  color: white;
+  box-sizing: border-box;
+  box-shadow: -2px 2px white;
+}
+
+.overlay a:hover  {
   color: #17202A;
   box-sizing: border-box;
   box-shadow: -2px 2px #17202A;
@@ -118,6 +142,8 @@ img.carousel-image {
   overflow: hidden;
   display: inline-flex;
   width: 60%;
+  height: 60%;
+  margin-top: 10vh;
 }
 
 .carousel.left {
