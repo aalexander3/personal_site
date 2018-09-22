@@ -40,7 +40,8 @@
   z-index: 3;
   background-color: #17202A;
   color: white;
-  border-bottom: solid #17202A 1px;
+  border: solid #17202A 0 0 1px 1px;
+  opacity: .95;
   width: 40vw;
   height: 100%;
   transition: width .25s cubic-bezier(0, .25, 1, .75);

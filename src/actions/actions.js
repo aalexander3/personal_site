@@ -25,3 +25,10 @@ export const setDetail = (project) => {
     payload: project
   }
 }
+
+export const setInterest = int => {
+  return {
+    type: "SET_INTEREST",
+    payload: int
+  }
+}

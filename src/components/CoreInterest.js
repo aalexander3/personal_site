@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { showAbout } from '../actions/actions'
+import { showAbout, setInterest } from '../actions/actions'
 
 
 class CoreInterest extends Component {
@@ -9,14 +9,12 @@ class CoreInterest extends Component {
     defaultInt: {}
   }
 
-  componentDidMount = () => {
-    this.updateInt(this.props.interests[2])
-  }
+  // componentDidMount = () => {
+  //   this.updateInt(this.props.interests[2])
+  // }
 
   updateInt = int => {
-    this.setState({
-      defaultInt: int
-    })
+    this.props.setInterest(int)
   }
 
   mappedInterests = () => {
@@ -34,23 +32,21 @@ class CoreInterest extends Component {
 
   render() {
     return (
-      <div className="about-page">
-        <div className="right-nav" data-name='about' onClick={this.props.showAbout}>About Me</div>
         <div className="core-interests">
-          <h1>{this.state.defaultInt.interest}</h1>
+          {/* <h1>{this.props.defaultInt.interest}</h1> */}
           <div className="mapped-interests">
             {this.mappedInterests()}
           </div>
         </div>
-      </div>
     )
   }
 }
 
 const mapStateToProps = state => {
   return {
-    interests: state.about.coreInterests
+    interests: state.about.coreInterests,
+    defaultInt: state.about.defaultInt
   }
 }
 
-export default connect(mapStateToProps, { showAbout })(CoreInterest)
+export default connect(mapStateToProps, { showAbout, setInterest })(CoreInterest)

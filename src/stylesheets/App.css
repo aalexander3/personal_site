@@ -18,11 +18,11 @@
 .home-page {
   z-index: 1;
   grid-row: 2;
-  grid-column: 2/4;
-}
-
-.page-card {
-  margin: 16vh 20vh 0 0;
+  grid-column: 2;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .page-card h1 {
@@ -35,43 +35,36 @@
   text-decoration: underline;
 }
 
-.background {
-  z-index: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 40%;
-  background: #2C3E50;
-  transition: height .15s linear;
-}
-
 .profile-image {
   z-index: 2;
-  position: absolute;
   width: 20vh;
-  right: 3.5vh;
-  top: 13vh;
+  height: 20vh;
+  /* right: 3.5vh; */
+  /* top: 13vh; */
   border-radius: 100%;
   border: solid lightgrey 1px;
   transition: width .15s linear;
 }
 
-.background.left{
-  left: 0;
-  z-index: -99;
+.home-divider {
+  margin: 6vh 2vw;
+  display: flex;
+  justify-content: space-between;
+  height: 40vh;
 }
 
-/* .background.small {
-  height: 15vh;
-  bottom: 85vh;
+@media (min-width: 768px) {
+  .home-divider {
+    height: 20vh;
+  }
 }
 
+@media (max-width: 767px) {
+  .home-divider {
+    height: 40vh;
+  }
+}
 
-.profile-image.small {
-  top: 6.9vh;
-  width: 7vh;
-} */
 
 /* logo spinner */
 @keyframes App-logo-spin {

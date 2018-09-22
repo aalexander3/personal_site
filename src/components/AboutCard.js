@@ -13,7 +13,7 @@ const AboutCard = props => {
         <h1>{ bio }</h1>
         <h4>{ bio2 }</h4>
       </div>
-      <div className="right-nav" data-name='core' onClick={showInterest}>Core Interests</div>
+      {/* <div className="right-nav" data-name='core' onClick={showInterest}>Core Interests</div> */}
     </div>
   )
 }

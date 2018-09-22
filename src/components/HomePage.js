@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import HomeCard from './HomeCard'
+import CoreInterest from './CoreInterest'
 
 class HomePage extends Component {
 
@@ -9,11 +10,14 @@ class HomePage extends Component {
 
     return (
       <div className='home-page' >
-        <img
-          className='profile-image'
-          alt="arren"
-          src='/images/arren-cartoon.jpg' />
-        <HomeCard page={ home } />
+        <div className='home-divider'>
+          <HomeCard page={ home } />
+          <img
+            className='profile-image'
+            alt="arren"
+            src='/images/arren-cartoon.jpg' />
+        </div>
+        <CoreInterest />
       </div>
     )
   }

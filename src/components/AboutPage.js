@@ -9,22 +9,22 @@ import CoreInterest from './CoreInterest'
 
 const AboutPage = props => {
 
-  const whatPage = () => {
-    switch (props.display) {
-      case 'about':
-        return <AboutCard />
-      case 'core':
-        return <CoreInterest />
-      // case 'fast':
-      //   return <FastFacts />
-      default:
-        return <AboutCard />
-    }
-  }
+  // const whatPage = () => {
+  //   switch (props.display) {
+  //     case 'about':
+  //       return <AboutCard />
+  //     case 'core':
+  //       return <CoreInterest />
+  //     // case 'fast':
+  //     //   return <FastFacts />
+  //     default:
+  //       return <AboutCard />
+  //   }
+  // }
 
   return (
     <div className="about-page">
-      { whatPage() }
+      <AboutCard />
     </div>
     )
 }
@@ -34,4 +34,4 @@ const mapStateToProps = state => {
   return { display }
 }
 
-export default connect(mapStateToProps)(AboutPage)
+export default AboutPage

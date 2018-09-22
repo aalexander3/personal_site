@@ -40,7 +40,6 @@
 .core-interests {
   text-align: center;
   position: relative;
-  top: 20vh;
 }
 
 .core-interests h1 {
@@ -61,7 +60,21 @@
   margin: .4rem 0;
 }
 
-.page-enter {
+@media (min-width: 768px) {
+  .interest {
+    width: 12vw;
+    height: 12vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .interest {
+    width: 20vw;
+    height: 20vw;
+  }
+}
+
+/* .page-enter {
   opacity: 0.01;
   transform: translateX(50%);
 }
@@ -81,4 +94,4 @@
   opacity: 0.01;
   transform: translateX(50%);
   transition: all 300ms ease-out;
-}
+} */
