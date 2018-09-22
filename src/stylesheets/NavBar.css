@@ -1,20 +1,23 @@
 .nav-words {
-  font-size: 25px;
+  font-size: 50px;
   color: white;
   margin: 1rem 0;
+  font-weight: 400;
 }
 
 .nav-words.icons {
-  font-size: 25px;
+  font-size: 30px;
+  line-height: 50px;
 }
 
-.nav-words.active {
-  color: #AED6F1;
-  text-decoration: underline;
-}
-
-.nav-words:hover {
-  color: #AED6F1;
+.nav-words.active, .nav-words:hover  {
+  color: #17202A;
+  -webkit-text-stroke: 1px white;
+  text-shadow:
+		-1px -1px 0 #FFF,
+		1px -1px 0 #FFF,
+		-1px 1px 0 #FFF,
+		1px 1px 0 #FFF;
 }
 
 .navbar.vertical {
@@ -42,7 +45,6 @@
   color: white;
   border: solid #17202A 0 0 1px 1px;
   opacity: .95;
-  width: 40vw;
   height: 100%;
   transition: width .25s cubic-bezier(0, .25, 1, .75);
 }
@@ -76,7 +78,24 @@
   transition: all .25s cubic-bezier(0, .25, 1, .75);
 }
 
-.span.horizontal.open {
-  transform: translateX(0rem);
-  transition: all .25s cubic-bezier(0, .25, 1, .75);
+@media (min-width: 768px) {
+  .navbar.vertical.open {
+    width: 40vw;
+  }
+
+  .span.horizontal.open {
+    transform: translateX(0rem);
+    transition: all .25s cubic-bezier(0, .25, 1, .75);
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar.vertical.open {
+    width: 75vw;
+  }
+
+  .span.horizontal.open {
+    transform: translateX(2rem);
+    transition: all .25s cubic-bezier(0, .25, 1, .75);
+  }
 }

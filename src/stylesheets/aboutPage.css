@@ -35,6 +35,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-bottom: 10vh;
 }
 
 .core-interests {
@@ -51,7 +52,7 @@
 }
 
 .interest:hover {
-  transform: scale(1.5);
+  transform: scale(1.5) rotate(-10deg);
   -webkit-filter: drop-shadow(.2rem .1rem .1rem rgba(244, 212, 54, 0.94));
 }
 

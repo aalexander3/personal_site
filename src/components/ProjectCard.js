@@ -24,13 +24,13 @@ class ProjectCard extends Component {
         <img alt={name} src={'/images/' + images[0]} />
         <h1>{name.toUpperCase()}</h1>
         <p>
-          {[<a href={github} target="_blank" rel="noopener noreferrer" > CODE </a>, " | "]}
-          {demo ? [<a href={demo} target="_blank" rel="noopener noreferrer" > DEMO </a>, " | " ]: null }
+          <a href={github} target="_blank" rel="noopener noreferrer" > CODE </a>
+          {demo ? [" | ", <a href={demo} target="_blank" rel="noopener noreferrer" > DEMO </a>]: null }
           <MediaQuery maxWidth={767}>
-            <Link to={`/projects/${slug}`}
+            {[" | ", <Link to={`/projects/${slug}`}
               onClick={() => setDetail(this.props.project)}>
                MORE INFO
-            </Link>
+            </Link>]}
           </MediaQuery>
         </p>
       </div>
