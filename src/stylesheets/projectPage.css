@@ -35,9 +35,7 @@
 
 
 .project-card img:hover {
-  /* opacity: .5; */
   background-color: white;
-  /* box-shadow: 0 8px black; */
 }
 
 .project-card h1 {
@@ -53,7 +51,6 @@
   background: #17202A;
   padding: 10vh 1vw;
   color: white;
-  
 }
 
 .project-info h1, .project-info h4 {
@@ -148,4 +145,79 @@ img.carousel-image {
 
 .carousel.left {
   cursor: url(/images/left_arrow.svg), auto;
+}
+
+@media (max-width: 767px) {
+  .project-detail {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2;
+    margin-bottom: 10vh;
+  }
+
+  .project-info {
+    width: 100%;
+    background: white;
+    padding: 10vh 1vw;
+    color: #17202A;
+    border-top: solid #17202A 2px;
+  }
+
+  .project-info h1, .project-info h4 {
+    color: #17202A;
+  }
+
+  .project-info a {
+    color: #17202A;
+    border: solid #17202A 2px;
+    box-sizing: border-box;
+    padding: .75rem;
+    margin: 1vw;
+    width: 8vw;
+    text-align: center;
+  }
+
+  .project-info a:hover  {
+    color: #17202A;
+    box-sizing: border-box;
+    box-shadow: -2px 2px #17202A;
+  }
+
+  .carousel {
+    margin-bottom: 5vh;
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay a {
+    color: #17202A;
+    border: solid #17202A 2px;
+    box-sizing: border-box;
+    padding: .75rem;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+  }
+
+  .overlay {
+    background-color: none;
+    opacity: 1;
+    z-index: 100;
+    position: relative;
+    grid-row: 2;
+    grid-column: 2;
+    padding: 1rem;
+    text-align: center;
+    width: 18rem;
+    height: 10.5rem;
+  }
+
+
+
+}
+
+@media (min-width: 768px) {
+
 }

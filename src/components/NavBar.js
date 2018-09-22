@@ -40,7 +40,7 @@ class NavBar extends Component {
               : <Icon type="user" className="nav-words icons" data-name="about" onClick={this.props.showAbout} />}
           </Link>
           <Link to='/projects'>
-            {(toggled && path === '/projects') ? <p className="nav-words active"> PROJECTS </p>
+            {(toggled && path.includes('/projects')) ? <p className="nav-words active"> PROJECTS </p>
               : toggled ? <p className="nav-words"> PROJECTS </p>
               : <Icon type="bulb" className="nav-words icons" />}
           </Link>
