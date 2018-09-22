@@ -53,8 +53,21 @@
   color: white;
 }
 
-.project-info h1, .project-info h4 {
+.project-info h1 {
+  margin-bottom: 1rem;
+  font-size: 50px;
+  color: #17202A;
+  -webkit-text-stroke: 1px white;
+  text-shadow:
+		-1px -1px 0 #FFF,
+		1px -1px 0 #FFF,
+		-1px 1px 0 #FFF,
+		1px 1px 0 #FFF;
+}
+
+.project-info h4 {
   color: white;
+  font-size: 20px;
   margin-bottom: 1rem;
 }
 

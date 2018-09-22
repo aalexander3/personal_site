@@ -18,7 +18,7 @@ class ProjectDetail extends Component {
         <Carousel images={images} name={name} />
 
         <div className="project-info">
-          <h1>{name}</h1>
+          <h1>{name.toUpperCase()}</h1>
           <h4>{description}</h4>
           <a href={github} target="_blank" rel="noopener noreferrer" >GITHUB</a>
           { demo ? <a href={demo} target="_blank" rel="noopener noreferrer" >DEMO</a> : null }

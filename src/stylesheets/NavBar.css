@@ -30,7 +30,7 @@
   background-color: #17202A;
   color: white;
   border-bottom: solid #17202A 1px;
-  width: 50px;
+  width: 60px;
   display: flex;
   flex-direction: column;
   transition: width .25s cubic-bezier(0, .25, 1, .75);
