@@ -5,6 +5,12 @@ export const showAbout = () => {
   }
 }
 
+export const toggleAbout = () => {
+  return {
+    type: "TOGGLE_ABOUT"
+  }
+}
+
 export const showInterest = () => {
   return {
     type: "SHOW_INTEREST",

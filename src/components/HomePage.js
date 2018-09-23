@@ -18,13 +18,16 @@ class HomePage extends Component {
             src='/images/arren-cartoon.jpg' />
         </div>
         <CoreInterest />
+
       </div>
     )
   }
 }
 
 const mapStateToProps = state => {
-  return { home: state.home }
+  return {
+    home: state.home,
+   }
 }
 
 export default connect(mapStateToProps)(HomePage)

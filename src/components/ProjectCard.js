@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { setDetail } from '../actions/actions'
 import { connect } from 'react-redux'
-import MediaQuery from 'react-responsive';
+import MediaQuery from 'react-responsive'
 
 
 class ProjectCard extends Component {

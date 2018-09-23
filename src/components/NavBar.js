@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom'
 import { Icon } from 'antd'
 import '../stylesheets/NavBar.css'
 
-import { showAbout } from '../actions/actions'
+import { showAbout, toggleAbout } from '../actions/actions'
 
 class NavBar extends Component {
 
@@ -20,6 +20,7 @@ class NavBar extends Component {
 
   render(){
     let { toggled } = this.state
+    let { toggleAbout } = this.props
     let path = this.props.location.pathname
 
     return (
@@ -34,11 +35,11 @@ class NavBar extends Component {
               : toggled ? <p className="nav-words"> HOME </p>
               :  <Icon type="home" className="nav-words icons" />}
           </Link>
-          <Link to="/about">
+          <div onClick={toggleAbout} >
             {(toggled && path === '/about') ? <p className="nav-words active" data-name="about" onClick={this.props.showAbout}> ABOUT </p>
               : toggled ? <p className="nav-words" data-name="about" onClick={this.props.showAbout}> ABOUT </p>
               : <Icon type="user" className="nav-words icons" data-name="about" onClick={this.props.showAbout} />}
-          </Link>
+          </div>
           <Link to='/projects'>
             {(toggled && path.includes('/projects')) ? <p className="nav-words active"> PROJECTS </p>
               : toggled ? <p className="nav-words"> PROJECTS </p>
@@ -50,4 +51,4 @@ class NavBar extends Component {
   }
 }
 
-export default withRouter(connect(null, { showAbout })(NavBar))
+export default withRouter(connect(null, { showAbout, toggleAbout })(NavBar))

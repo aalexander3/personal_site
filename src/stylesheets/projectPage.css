@@ -57,12 +57,12 @@
   margin-bottom: 1rem;
   font-size: 50px;
   color: #17202A;
-  -webkit-text-stroke: 1px white;
-  text-shadow:
+  -webkit-text-stroke: 2px white;
+  /* text-shadow:
 		-1px -1px 0 #FFF,
 		1px -1px 0 #FFF,
 		-1px 1px 0 #FFF,
-		1px 1px 0 #FFF;
+		1px 1px 0 #FFF; */
 }
 
 .project-info h4 {

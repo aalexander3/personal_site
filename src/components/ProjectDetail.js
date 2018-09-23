@@ -11,7 +11,7 @@ class ProjectDetail extends Component {
 
   render(){
 
-    const { name, images, github, slug, description, demo } = this.state.selectedProject
+    const { name, images, github, description, demo } = this.state.selectedProject
 
     return (
       <div className="project-detail">
