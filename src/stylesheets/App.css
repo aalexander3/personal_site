@@ -69,6 +69,10 @@
     width: 16vh;
     height: 16vh;
   }
+
+  .page-card {
+    width: 40vw;
+  }
 }
 
 
