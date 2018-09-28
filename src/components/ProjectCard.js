@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { setDetail } from '../actions/actions'
+import { setDetail, closeAbout } from '../actions/actions'
 import { connect } from 'react-redux'
 import MediaQuery from 'react-responsive'
 
 
 class ProjectCard extends Component {
+
+  projectClick = () => {
+    this.props.closeAbout()
+    this.props.setDetail(this.props.project)
+  }
 
   render (){
     const { name, images, github, demo, slug } = this.props.project
@@ -16,7 +21,7 @@ class ProjectCard extends Component {
         <MediaQuery minWidth={768}>
           <div className="overlay">
             <Link to={`/projects/${slug}`}
-              onClick={() => setDetail(this.props.project)}>
+              onClick={this.projectClick}>
               MORE INFO
             </Link>
           </div>
@@ -28,7 +33,7 @@ class ProjectCard extends Component {
           {demo ? [" | ", <a href={demo} target="_blank" rel="noopener noreferrer" > DEMO </a>]: null }
           <MediaQuery maxWidth={767}>
             {[" | ", <Link to={`/projects/${slug}`}
-              onClick={() => setDetail(this.props.project)}>
+              onClick={this.projectClick}>
                MORE INFO
             </Link>]}
           </MediaQuery>
@@ -38,4 +43,4 @@ class ProjectCard extends Component {
   }
 }
 
-export default connect(null, { setDetail })(ProjectCard)
+export default connect(null, { setDetail, closeAbout })(ProjectCard)

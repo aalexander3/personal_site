@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom'
 import { Icon } from 'antd'
 import '../stylesheets/NavBar.css'
 
-import { showAbout, toggleAbout } from '../actions/actions'
+import { showAbout, toggleAbout, closeAbout } from '../actions/actions'
 
 class NavBar extends Component {
 
@@ -15,8 +15,24 @@ class NavBar extends Component {
   }
 
   toggleCollapsed = () => {
-    this.setState(prevState => ({toggled: !prevState.toggled}))
+    this.setState(prevState => ({ toggled: !prevState.toggled }), this.handleClose)
   }
+
+  closeNav = () => {
+    this.setState({ toggled: false })
+  }
+
+  divClick = () => {
+    this.props.toggleAbout()
+    this.closeNav()
+  }
+
+  linkClick = () => {
+    this.props.closeAbout()
+    this.closeNav()
+  }
+
+  handleClose = () => (!this.state.toggled ? null : this.props.closeAbout())
 
   render(){
     let { toggled } = this.state
@@ -28,19 +44,19 @@ class NavBar extends Component {
         <div className="navbar horizontal">
           <span className={toggled ? "span horizontal open" : "span horizontal" } style={{paddingTop:'3px'}}>ARREN ALEXANDER</span>
         </div>
-        <div onMouseLeave={() => this.setState({ toggled: false })} className={toggled ? "navbar vertical open" : "navbar vertical"}>
+        <div onMouseLeave={this.closeNav} className={toggled ? "navbar vertical open" : "navbar vertical"}>
           <img src={toggled ? "https://cdn4.iconfinder.com/data/icons/user-interface-54/18/Reject-512.png":"https://static.thenounproject.com/png/153-200.png"} alt="hamburger icon" onClick={this.toggleCollapsed}/>
-          <Link to="/">
+          <Link to="/" onClick={this.linkClick}>
             {(toggled && path === '/') ? <p className="nav-words active"> HOME </p>
               : toggled ? <p className="nav-words"> HOME </p>
               :  <Icon type="home" className="nav-words icons" />}
           </Link>
-          <div onClick={toggleAbout} >
-            {(toggled && path === '/about') ? <p className="nav-words active" data-name="about" onClick={this.props.showAbout}> ABOUT </p>
-              : toggled ? <p className="nav-words" data-name="about" onClick={this.props.showAbout}> ABOUT </p>
-              : <Icon type="user" className="nav-words icons" data-name="about" onClick={this.props.showAbout} />}
+          <div onClick={this.divClick} >
+            {(toggled && path === '/about') ? <p className="nav-words active" data-name="about" > ABOUT </p>
+              : toggled ? <p className="nav-words" data-name="about" > ABOUT </p>
+              : <Icon type="user" className="nav-words icons" data-name="about" />}
           </div>
-          <Link to='/projects'>
+          <Link to='/projects' onClick={this.linkClick} >
             {(toggled && path.includes('/projects')) ? <p className="nav-words active"> PROJECTS </p>
               : toggled ? <p className="nav-words"> PROJECTS </p>
               : <Icon type="bulb" className="nav-words icons" />}
@@ -51,4 +67,4 @@ class NavBar extends Component {
   }
 }
 
-export default withRouter(connect(null, { showAbout, toggleAbout })(NavBar))
+export default withRouter(connect(null, { showAbout, toggleAbout, closeAbout })(NavBar))

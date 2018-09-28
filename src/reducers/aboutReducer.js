@@ -38,6 +38,9 @@ export const aboutReducer = (state = aboutState, action) => {
     case "TOGGLE_ABOUT":
       return { ...state, aboutToggle: !state.aboutToggle }
 
+    case "CLOSE_ABOUT":
+      return { ...state, aboutToggle: false }
+
     default:
       return state
   }

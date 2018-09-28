@@ -11,6 +11,12 @@ export const toggleAbout = () => {
   }
 }
 
+export const closeAbout = () => {
+  return {
+    type: "CLOSE_ABOUT"
+  }
+}
+
 export const showInterest = () => {
   return {
     type: "SHOW_INTEREST",
