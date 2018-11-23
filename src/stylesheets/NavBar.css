@@ -1,18 +1,19 @@
 .nav-words {
   font-size: 50px;
   color: white;
-  margin: 1rem 0;
+  margin: 1.2rem 0;
   font-weight: 400;
 }
 
 .nav-words.icons {
   font-size: 30px;
-  line-height: 65px;
+  line-height: 72px;
 }
 
 .nav-words.active, .nav-words:hover  {
   color: #17202A;
   -webkit-text-stroke: 2px white;
+  cursor: pointer;
 }
 
 .nav-words.icons.active, .nav-words.icons:hover  {
@@ -53,6 +54,7 @@
   transition: width .25s cubic-bezier(0, .25, 1, .75);
 }
 
+
 .navbar.vertical img {
   width: 30px;
   height: 30px;
@@ -62,7 +64,7 @@
 
 .navbar.vertical img:hover {
   cursor: pointer;
-  filter: invert(10%) drop-shadow(0px 0px 2px white);
+
 }
 
 .navbar.horizontal {
@@ -92,7 +94,7 @@
 
 @media (min-width: 768px) {
   .navbar.vertical.open {
-    width: 40vw;
+    width: 30vw;
   }
 
   .span.horizontal.open {

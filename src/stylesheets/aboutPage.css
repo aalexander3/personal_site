@@ -43,7 +43,7 @@
 
 .about-card img:hover {
   cursor: pointer;
-  filter: invert(10%) drop-shadow(0px 0px 2px white);
+  filter: invert(10%);
 }
 
 .about-card h1 {
@@ -77,11 +77,11 @@
   font-size: 1.4rem;
 }
 
-.interest {
+.interest img {
    transition: all .1s ease-in-out;
 }
 
-.interest:hover {
+.interest img:hover {
   transform: scale(1.5) rotate(-10deg);
   -webkit-filter: drop-shadow(.2rem .1rem .1rem rgba(244, 212, 54, 0.94));
 }

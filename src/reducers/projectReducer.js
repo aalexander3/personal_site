@@ -7,15 +7,17 @@ const projectState = {
       github: 'https://github.com/aalexander3/forecast-vr-frontend',
       demo: 'http://forecast-vr.herokuapp.com/',
       images: ['ForecastVR-vr.png', 'ForecastVR-landing.png', 'ForecastVR-detail.png'],
-      slug: 'forecast-vr'
+      slug: 'forecast-vr',
+      environment: 'React, Redux, JavaScript, HTML 5, CSS, AFrame VR, Heroku, Git'
     },
     {
       name: "Investr",
-      description: 'Investr is a React, Redux, and Rails application that pairs investors with startups looking for funding. The startup data was scraped from Angel\'s List. The Real-time messaging feature was implemented with Action Cable.',
+      description: 'Investr is a React frontend and Rails API backend application that pairs venture seeking investors with startups looking for funding. The startup data was scraped from Angel\'s List. The real-time messaging feature was implemented with Action Cable.',
       github: 'https://github.com/aalexander3/venture-time-frontend',
       demo: null,
       images: ['investr-match.png', 'investr-message.png', 'investr-profile.png'],
-      slug: 'investr'
+      slug: 'investr',
+      environment: 'React, JavaScript, HTML 5, CSS, Rails API, Web Sockets, PostgreSQL, Git'
     },
     {
       name: "Wantr",
@@ -23,7 +25,17 @@ const projectState = {
       github: 'https://github.com/aalexander3/wantr',
       demo: null,
       images: ['wantr-land.png', 'wantr-dash.png', 'wantr-add.png'],
-      slug: 'wantr'
+      slug: 'wantr',
+      environment: 'React, JavaScript, HTML 5, CSS, Rails API, Web Sockets, PostgreSQL, Git'
+    },
+    {
+      name: "Crowd Capsule",
+      description: 'Crowd Capsule is a crowd-sourced digital time capsule designed to collectively tell the story of the human experience. Conceived and built in 36 hours by a team of developers as a solution to NASA\'s 2018 Space Apps Challenge: "Remix the Golden Record"',
+      github: 'https://github.com/aalexander3/crowd-capsule',
+      demo: null,
+      images: ['crowd-capsule-interaction.gif', 'crowd-capsule-map.png', 'crowd-capsule-upload.png'],
+      slug: 'crowd-capsule',
+      environment: 'React, Redux, HTML 5, CSS, Cloudinary API, Rails API, PostgreSQL, Git'
     },
   ],
   selectedProject: {}

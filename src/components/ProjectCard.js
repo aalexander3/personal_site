@@ -26,7 +26,9 @@ class ProjectCard extends Component {
             </Link>
           </div>
         </MediaQuery>
-        <img alt={name} src={'/images/' + images[0]} />
+        <div className="project-img">
+          <img alt={name} src={'/images/' + images[0]} />
+        </div>
         <h1>{name.toUpperCase()}</h1>
         <p>
           <a href={github} target="_blank" rel="noopener noreferrer" > CODE </a>
