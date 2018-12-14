@@ -14,7 +14,7 @@ const projectState = {
       name: "Investr",
       description: 'Investr is a React frontend and Rails API backend application that pairs venture seeking investors with startups looking for funding. The startup data was scraped from Angel\'s List. The real-time messaging feature was implemented with Action Cable.',
       github: 'https://github.com/aalexander3/venture-time-frontend',
-      demo: null,
+      demo: 'https://app-investr.herokuapp.com',
       images: ['investr-match.png', 'investr-message.png', 'investr-profile.png'],
       slug: 'investr',
       environment: 'React, JavaScript, HTML 5, CSS, Rails API, Web Sockets, PostgreSQL, Git'

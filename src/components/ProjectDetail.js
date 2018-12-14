@@ -9,6 +9,13 @@ class ProjectDetail extends Component {
     selectedProject: this.props.projects.find(project => project.slug === this.props.match.params.name),
   }
 
+  componentDidMount(){
+    this.state.selectedProject.images.forEach(image => {
+      const img = new Image();
+      img.src = image
+    })
+  }
+
   render(){
 
     const { name, images, github, description, demo } = this.state.selectedProject
