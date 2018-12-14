@@ -21,7 +21,7 @@
   opacity: .7;
 }
 
-.left {
+.toggle-left {
   transform: translate3d(8vw, 0, 0) rotateY(20deg);
   transform-origin: 50% 0%;
   opacity: .7;
