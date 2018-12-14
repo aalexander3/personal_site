@@ -8,7 +8,7 @@ class HomePage extends Component {
   render(){
     const { home } = this.props
     const rotate = this.props.aboutToggle ? 'rotate' : ''
-    const left = this.props.navToggle ? 'left' : ''
+    const left = this.props.navToggle ? 'toggle-left' : ''
 
     return (
       <div className={`home-page ${rotate} ${left}`} >

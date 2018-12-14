@@ -8,7 +8,7 @@ const ProjectPage = props => {
 
   const mappedProjects = props.projects.map(project => <ProjectCard key={project.slug} project={project} />)
   const rotate = props.aboutToggle ? 'rotate' : ''
-  const left = props.navToggle ? 'left' : ''
+  const left = props.navToggle ? 'toggle-left' : ''
 
   return (
     <div className={`project-page ${rotate} ${left}`}>
