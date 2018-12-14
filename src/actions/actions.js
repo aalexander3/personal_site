@@ -11,6 +11,13 @@ export const toggleAbout = () => {
   }
 }
 
+export const toggleNav = (payload) => {
+  return {
+    type: "TOGGLE_NAV",
+    payload
+  }
+}
+
 export const closeAbout = () => {
   return {
     type: "CLOSE_ABOUT"
