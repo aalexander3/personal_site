@@ -6,20 +6,21 @@ import { withRouter } from 'react-router-dom'
 import { Icon } from 'antd'
 import '../stylesheets/NavBar.css'
 
-import { showAbout, toggleAbout, closeAbout } from '../actions/actions'
+import { showAbout, toggleAbout, closeAbout, toggleNav } from '../actions/actions'
 
 class NavBar extends Component {
 
-  state = {
-    toggled: false
-  }
+  // state = {
+  //   toggled: false
+  // }
 
   toggleCollapsed = () => {
-    this.setState(prevState => ({ toggled: !prevState.toggled }), this.handleClose)
+    this.props.toggleNav({ toggled: !this.props.toggled })
+    this.handleClose()
   }
 
   closeNav = () => {
-    this.setState({ toggled: false })
+    this.props.toggleNav({ toggled: false })
   }
 
   divClick = () => {
@@ -32,11 +33,10 @@ class NavBar extends Component {
     this.closeNav()
   }
 
-  handleClose = () => (!this.state.toggled ? null : this.props.closeAbout())
+  handleClose = () => (this.props.toggled ? null : this.props.closeAbout())
 
   render(){
-    let { toggled } = this.state
-    let { toggleAbout } = this.props
+    let { toggleAbout, toggled } = this.props
     let path = this.props.location.pathname
 
     return (
@@ -67,4 +67,10 @@ class NavBar extends Component {
   }
 }
 
-export default withRouter(connect(null, { showAbout, toggleAbout, closeAbout })(NavBar))
+const mapStateToProps = state => {
+  return {
+    toggled: state.nav.toggled
+  }
+}
+
+export default withRouter(connect(mapStateToProps, { showAbout, toggleAbout, closeAbout, toggleNav })(NavBar))

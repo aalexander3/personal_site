@@ -18,11 +18,13 @@
   color: white;
   opacity: .98;
   transition: all ease-in .4s;
+  transform: rotateY(0deg);
 }
 
 .about-card.hidden{
   z-index: 4;
   position: absolute;
+  transform: rotateY(-40deg);
   /* display: none; */
   width: 0%;
   right: 0;
@@ -82,8 +84,13 @@
 }
 
 .interest img:hover {
-  transform: scale(1.5) rotate(-10deg);
-  -webkit-filter: drop-shadow(.2rem .1rem .1rem rgba(244, 212, 54, 0.94));
+  transform: scale(1.4) translateY(-1.5vh);
+  /* box-shadow: 0 10px 10px -10px rgba(0, 0, 0, .5); */
+  -webkit-filter: drop-shadow(0rem .6rem .08rem rgba(54, 54, 54, 0.8));
+}
+
+.interest:before {
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%)
 }
 
 .interest-icon {

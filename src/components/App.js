@@ -16,11 +16,11 @@ class App extends Component {
     return (
       <div className='app' >
         <NavBar />
-        <Switch>
-          <Route exact path='/' component={ HomePage } />
-          <Route exact path='/projects' component={ ProjectPage } />
-          <Route exact path='/projects/:name' render={() =>  <ProjectDetail /> } />
-        </Switch>
+          <Switch>
+            <Route exact path='/' component={ HomePage } />
+            <Route exact path='/projects' component={ ProjectPage } />
+            <Route exact path='/projects/:name' render={() =>  <ProjectDetail /> } />
+          </Switch>
         <AboutCard />
         <ContactPage />
       </div>

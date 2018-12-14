@@ -7,9 +7,11 @@ class HomePage extends Component {
 
   render(){
     const { home } = this.props
+    const rotate = this.props.aboutToggle ? 'rotate' : ''
+    const left = this.props.navToggle ? 'left' : ''
 
     return (
-      <div className='home-page' >
+      <div className={`home-page ${rotate} ${left}`} >
         <div className='home-divider'>
           <HomeCard page={ home } />
           <img
@@ -27,6 +29,8 @@ class HomePage extends Component {
 const mapStateToProps = state => {
   return {
     home: state.home,
+    aboutToggle: state.about.aboutToggle,
+    navToggle: state.nav.toggled
    }
 }
 
