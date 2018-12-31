@@ -36,7 +36,7 @@ class NavBar extends Component {
   handleClose = () => (this.props.toggled ? null : this.props.closeAbout())
 
   render(){
-    let { toggleAbout, toggled } = this.props
+    let { toggled } = this.props
     let path = this.props.location.pathname
 
     return (

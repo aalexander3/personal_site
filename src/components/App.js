@@ -7,10 +7,19 @@ import ProjectDetail from './ProjectDetail'
 import ContactPage from './ContactPage'
 import AboutCard from './AboutCard'
 import NavBar from './NavBar'
+import { connect } from 'react-redux'
 import { Switch, Route, withRouter } from 'react-router-dom'
 
 
 class App extends Component {
+  componentDidMount(){
+    this.props.images.forEach(image => {
+      const img = new Image();
+      img.onload = () => {
+        img.src = image
+      }
+    })
+  }
 
   render() {
     return (
@@ -28,4 +37,17 @@ class App extends Component {
   }
 }
 
-export default withRouter(App);
+const reduceImages = (projects) => {
+  return projects.reduce((accumulator, project) => {
+    return [...accumulator, ...project.images]
+  }, [])
+}
+
+const mapStateToProps = state => {
+  let images = reduceImages(state.projects.projects)
+  return {
+    images
+  }
+}
+
+export default withRouter(connect(mapStateToProps)(App));

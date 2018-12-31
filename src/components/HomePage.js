@@ -5,6 +5,25 @@ import CoreInterest from './CoreInterest'
 
 class HomePage extends Component {
 
+  state = {
+    image: {
+      src: ''
+    }
+  }
+
+  componentDidMount(){
+    let primaryImage = new Image()
+    primaryImage.onload = () => {
+      this.setState({
+        image: {
+          ...this.state.image,
+          src: '/images/arren-cartoon.jpg'
+        }
+      })
+    }
+    primaryImage.src = '/images/arren-cartoon.jpg'
+  }
+
   render(){
     const { home } = this.props
     const rotate = this.props.aboutToggle ? 'rotate' : ''
@@ -17,7 +36,7 @@ class HomePage extends Component {
           <img
             className='profile-image'
             alt="arren"
-            src='/images/arren-cartoon.jpg' />
+            src={this.state.image.src} />
         </div>
         <CoreInterest />
 
