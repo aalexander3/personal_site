@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
@@ -9,10 +9,6 @@ import '../stylesheets/NavBar.css'
 import { showAbout, toggleAbout, closeAbout, toggleNav } from '../actions/actions'
 
 class NavBar extends Component {
-
-  // state = {
-  //   toggled: false
-  // }
 
   toggleCollapsed = () => {
     this.props.toggleNav({ toggled: !this.props.toggled })
@@ -36,11 +32,11 @@ class NavBar extends Component {
   handleClose = () => (this.props.toggled ? null : this.props.closeAbout())
 
   render(){
-    let { toggleAbout, toggled } = this.props
+    let { toggled } = this.props
     let path = this.props.location.pathname
 
     return (
-      <React.Fragment>
+      <Fragment>
         <div className="navbar horizontal">
           <span className={toggled ? "span horizontal open" : "span horizontal" } style={{paddingTop:'3px'}}>ARREN ALEXANDER</span>
         </div>
@@ -62,7 +58,7 @@ class NavBar extends Component {
               : <Icon type="bulb" className="nav-words icons" />}
           </Link>
         </div>
-      </React.Fragment>
+      </Fragment>
     )
   }
 }

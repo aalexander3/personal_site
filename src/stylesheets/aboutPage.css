@@ -117,12 +117,13 @@
     display: block;
     width: 88vw;
     right: 0;
-    height: 120vh;
+    height: 100vh;
     background: #A6ACAF;
-    padding: 10vh 10vw;
+    padding: 10vh 10vw 15vh 10vw;
     color: white;
     opacity: .98;
     transition: all ease-in .4s;
+    overflow-y: scroll;
   }
 
 }

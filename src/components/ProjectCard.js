@@ -14,7 +14,6 @@ class ProjectCard extends Component {
 
   render (){
     const { name, images, github, demo, slug } = this.props.project
-    const { setDetail } = this.props
 
     return (
       <div className="project-card" >

@@ -64,7 +64,6 @@
 
 .navbar.vertical img:hover {
   cursor: pointer;
-
 }
 
 .navbar.horizontal {
@@ -74,17 +73,17 @@
   z-index: 3;
   background-color: white;
   color: #17202A;
-  border-bottom: solid #17202A 3px;
+  /* border-bottom: solid #17202A 3px; */
   text-align: center;
 }
 
 .span.horizontal {
   position: absolute;
   font-size: 24px;
-  transform: translateX(-7rem);
+  transform: translateX(-9rem);
   transition: all .25s cubic-bezier(0, .25, 1, .75);
-  color: white;
-  -webkit-text-stroke: 1px #17202A;
+  color: #17202A;
+  /* -webkit-text-stroke: 1px #17202A; */
   /* text-shadow:
 		-1px -1px 0 #17202A,
 		1px -1px 0 #17202A,
@@ -115,7 +114,5 @@
 
   .span.horizontal {
     font-size: 18px;
-    color: white;
-    -webkit-text-stroke: 1px #17202A;
   }
 }
