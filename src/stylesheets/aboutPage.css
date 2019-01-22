@@ -107,8 +107,8 @@
 
 @media (max-width: 767px) {
   .interest {
-    width: 20vw;
-    height: 20vw;
+    width: 19vw;
+    height: 19vw;
   }
 
   .about-card.active {

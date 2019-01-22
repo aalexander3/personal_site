@@ -80,15 +80,9 @@
 .span.horizontal {
   position: absolute;
   font-size: 24px;
-  transform: translateX(-9rem);
+  transform: translateX(-7rem);
   transition: all .25s cubic-bezier(0, .25, 1, .75);
   color: #17202A;
-  /* -webkit-text-stroke: 1px #17202A; */
-  /* text-shadow:
-		-1px -1px 0 #17202A,
-		1px -1px 0 #17202A,
-		-1px 1px 0 #17202A,
-		1px 1px 0 #17202A; */
 }
 
 @media (min-width: 768px) {
