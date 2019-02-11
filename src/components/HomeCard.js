@@ -7,7 +7,9 @@ const HomeCard = props => {
 
   return (
     <div className="page-card">
-      <h1>{page.headline}</h1>
+      <div className="page-headline">
+        <h1>{page.headline}</h1>
+      </div>
       <h3>{props.defaultInt.interest}</h3>
       <a onClick={ toggleAbout } className="card-link">More about me</a>
     </div>

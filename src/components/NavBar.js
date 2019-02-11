@@ -38,7 +38,13 @@ class NavBar extends Component {
     return (
       <Fragment>
         <div className="navbar horizontal">
-          <span className={toggled ? "span horizontal open" : "span horizontal" } style={{paddingTop:'3px'}}>ARREN ALEXANDER</span>
+          <span className={toggled ? "span horizontal open" : "span horizontal" } style={{paddingTop:'3px'}}>
+          <img
+            className='profile-image'
+            alt="arren"
+            src='/images/arren-cartoon.jpg' />
+            {toggled ? "AA" : "ARREN ALEXANDER" }
+          </span>
         </div>
         <div onMouseLeave={this.closeNav} className={toggled ? "navbar vertical open" : "navbar vertical"}>
           <img src={toggled ? "https://cdn4.iconfinder.com/data/icons/user-interface-54/18/Reject-512.png":"https://static.thenounproject.com/png/153-200.png"} alt="hamburger icon" onClick={this.toggleCollapsed}/>

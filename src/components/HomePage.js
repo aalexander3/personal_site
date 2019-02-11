@@ -14,10 +14,6 @@ class HomePage extends Component {
       <div className={`home-page ${rotate} ${left}`} >
         <div className='home-divider'>
           <HomeCard page={ home } />
-          <img
-            className='profile-image'
-            alt="arren"
-            src='/images/arren-cartoon.jpg' />
         </div>
         <CoreInterest />
 

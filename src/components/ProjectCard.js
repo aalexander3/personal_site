@@ -30,8 +30,8 @@ class ProjectCard extends Component {
         </div>
         <h1>{name.toUpperCase()}</h1>
         <p>
-          <a href={github} target="_blank" rel="noopener noreferrer" > CODE </a>
-          {demo ? [" | ", <a href={demo} target="_blank" rel="noopener noreferrer" > DEMO </a>]: null }
+          <a href={github} className="proj-link" target="_blank" rel="noopener noreferrer" > CODE</a>
+          {demo ? [" | ", <a href={demo} className="proj-link" target="_blank" rel="noopener noreferrer" > DEMO </a>]: null }
           <MediaQuery maxWidth={767}>
             {[" | ", <Link to={`/projects/${slug}`}
               onClick={this.projectClick}>

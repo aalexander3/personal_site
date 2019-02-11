@@ -15,6 +15,7 @@
   grid-column: 2/4;
   display: flex;
   justify-content: space-between;
+  z-index: 10;
 }
 
 .project-card {
@@ -34,6 +35,15 @@
   margin: 0 0 1rem 0;
 }
 
+.proj-link {
+  color: #17202A;
+  text-decoration: none;
+}
+
+.proj-link:hover {
+  color: #17202A;
+  text-decoration: underline;
+}
 
 .project-img {
   width: 18rem;
@@ -57,6 +67,7 @@
   background: #17202A;
   padding: 10vh 1vw;
   color: white;
+
 }
 
 .project-info h1 {

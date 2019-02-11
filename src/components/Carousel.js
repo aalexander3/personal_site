@@ -27,7 +27,7 @@ class Carousel extends Component {
     this.setState(prevState => {
       if (prevState.imageIndex === this.props.images.length - 1) {
         return {
-          imageIndex: 0
+          imageIndex: prevState.imageIndex
         }
         // return prevState
       } else {
@@ -42,7 +42,7 @@ class Carousel extends Component {
     this.setState(prevState => {
       if (prevState.imageIndex === 0) {
         return {
-          imageIndex: this.props.images.length - 1
+          imageIndex: prevState.imageIndex
         }
         // return prevState
       } else {
