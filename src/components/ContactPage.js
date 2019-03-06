@@ -19,7 +19,7 @@ class ContactPage extends Component {
         <a href="https://github.com/aalexander3" target="_blank" rel="noopener noreferrer">
           <img className='contact-icons' src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Github.png" alt="github" />
         </a>
-        <a href="https://www.linkedin.com/in/arren-alexander-10a361124/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/arren-alexander/" target="_blank" rel="noopener noreferrer">
           <img className='contact-icons' src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Linkedin.png" alt="linkedin" />
         </a>
         <a href="https://medium.com/@aralx73" target="_blank" rel="noopener noreferrer">

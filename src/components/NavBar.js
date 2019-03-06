@@ -47,7 +47,9 @@ class NavBar extends Component {
           </span>
         </div>
         <div onMouseLeave={this.closeNav} className={toggled ? "navbar vertical open" : "navbar vertical"}>
-          <img src={toggled ? "https://cdn4.iconfinder.com/data/icons/user-interface-54/18/Reject-512.png":"https://static.thenounproject.com/png/153-200.png"} alt="hamburger icon" onClick={this.toggleCollapsed}/>
+          <div onClick={this.toggleCollapsed} >
+            <Icon type="plus-circle" className={toggled ? "nav-words icons toggled" :" nav-words icons not-toggled"} />
+          </div>
           <Link to="/" onClick={this.linkClick}>
             {(toggled && path === '/') ? <p className="nav-words active"> HOME </p>
               : toggled ? <p className="nav-words"> HOME </p>

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
 import { toggleAbout } from '../actions/actions'
+import { Icon } from 'antd'
 
 const AboutCard = props => {
 
@@ -10,9 +11,8 @@ const AboutCard = props => {
   const showText = () => {
     return (
       <Fragment>
-        <img src="https://cdn4.iconfinder.com/data/icons/user-interface-54/18/Reject-512.png"
-          alt="close"
-          onClick={ toggleAbout } />
+        <Icon type="close-circle" className="nav-words icons about" onClick={ toggleAbout }  />
+
         <h1>{ bio }</h1>
         <h4>{ bio2 }</h4>
       </Fragment>

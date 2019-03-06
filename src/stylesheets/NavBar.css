@@ -16,6 +16,29 @@
   cursor: pointer;
 }
 
+.nav-words.icons.toggled {
+  transform-origin: 50% 50%;
+  transform: rotateZ(45deg);
+  transition: transform .2s linear;
+}
+
+.nav-words.icons.not-toggled {
+  transform-origin: 50% 50%;
+  transform: rotateZ(0deg);
+  transition: transform .2s linear;
+}
+
+.nav-words.icons.about:hover  {
+  color: #A6ACAF;
+  -webkit-text-stroke: 0px white;
+  cursor: pointer;
+  text-shadow:
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF;
+}
+
 .nav-words.icons.active, .nav-words.icons:hover  {
   -webkit-text-stroke: 0px white;
   color: #17202A;
@@ -102,11 +125,11 @@
   }
 
   .span.horizontal.open {
-    transform: translateX(0rem);
+    transform: translateX(6.5rem);
     transition: all .25s cubic-bezier(0, .25, 1, .75);
   }
 
   .span.horizontal {
-    font-size: 18px;
+    font-size: 14px;
   }
 }

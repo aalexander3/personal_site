@@ -7,6 +7,7 @@
   justify-content: space-evenly;
   margin-bottom: 10vh;
   transition: all .3s linear;
+  overflow-y: scroll;
 }
 
 .project-detail {
