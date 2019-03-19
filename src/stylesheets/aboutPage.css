@@ -7,7 +7,7 @@
 }
 
 .about-card.active {
-  z-index: 4;
+  z-index: 12;
   position: absolute;
   display: block;
   width: 35%;
@@ -22,7 +22,7 @@
 }
 
 .about-card.hidden{
-  z-index: 4;
+  z-index: 12;
   position: absolute;
   transform: rotateY(-40deg);
   /* display: none; */

@@ -12,7 +12,8 @@ class ProjectDetail extends Component {
   componentDidMount(){
     this.state.selectedProject.images.forEach(image => {
       const img = new Image();
-      img.src = image
+      img.src = `/images/${image}`
+      
     })
   }
 

@@ -33,7 +33,7 @@ class ProjectCard extends Component {
           <a href={github} className="proj-link" target="_blank" rel="noopener noreferrer" > CODE</a>
           {demo ? [" | ", <a href={demo} className="proj-link" target="_blank" rel="noopener noreferrer" > DEMO </a>]: null }
           <MediaQuery maxWidth={767}>
-            {[" | ", <Link to={`/projects/${slug}`}
+            {[" | ", <Link key={'link1'} to={`/projects/${slug}`}
               onClick={this.projectClick}>
                MORE INFO
             </Link>]}
