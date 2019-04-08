@@ -1,6 +1,6 @@
 
 const aboutState = {
-    bio: 'Full stack web developer and instructor with a passion for travel, music, and the outdoors.',
+    bio: 'Full stack web developer with a passion for travel, music, and the outdoors.',
     bio2: "I'm a 'once aspiring opera singer, rock climber, and pie baker' who discovered software development while studying with a coworker at a climbing gym. I fell in love with working on particular details, solving tough problems, and the importance of having a beginner’s mindset. I like building with React and Rails, solving complex problems with JavaScript, and creating intuitive interfaces with pixel-perfect CSS & HTML. I focus on creative interaction and technical innovation, resulting in projects that satisfy my curiosity to try new technologies and tools.",
     display: 'about',
     aboutToggle: false,

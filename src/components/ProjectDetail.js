@@ -13,13 +13,13 @@ class ProjectDetail extends Component {
     this.state.selectedProject.images.forEach(image => {
       const img = new Image();
       img.src = `/images/${image}`
-      
+
     })
   }
 
   render(){
 
-    const { name, images, github, description, demo } = this.state.selectedProject
+    const { name, images, github, description, demo, environment } = this.state.selectedProject
 
     return (
       <div className="project-detail">
@@ -28,8 +28,9 @@ class ProjectDetail extends Component {
         <div className="project-info">
           <h1>{name.toUpperCase()}</h1>
           <h4>{description}</h4>
+          <p>Built with: {environment}</p>
           <a href={github} target="_blank" rel="noopener noreferrer" >GITHUB</a>
-          { demo ? <a href={demo} target="_blank" rel="noopener noreferrer" >DEMO</a> : null }
+          { demo && <a href={demo} target="_blank" rel="noopener noreferrer" >VIEW</a> }
         </div>
       </div>
     )

@@ -1,15 +1,1 @@
-<svg width="32" height="12.000000000000002" xmlns="http://www.w3.org/2000/svg">
-
- <g>
-  <title>background</title>
-  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
- </g>
- <g>
-  <title>Layer 1</title>
-  <g stroke="null" transform="rotate(-179.99314880371094 16.000232696533203,6.051093578338623) " id="svg_4">
-   <rect stroke="null" id="svg_1" height="2" width="7" transform="matrix(0.7071,-0.7071,0.7071,0.7071,2.6203,21.9613) " y="6.818" x="24.318"/>
-   <rect stroke="null" id="svg_2" height="2" width="7" transform="matrix(-0.7071,-0.7071,0.7071,-0.7071,44.4599,26.9808) " y="3.282" x="24.318"/>
-   <rect stroke="null" id="svg_3" height="2" width="28" y="5" x="1"/>
-  </g>
- </g>
-</svg>
+<svg width="32" height="12" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M-1-1h582v402H-1z"/><g stroke="null"><path d="M7.364 2.514l-4.95 4.95L1 6.048l4.95-4.95z"/><path d="M2.415 4.636l4.95 4.95L5.95 11 1 6.05z"/><path d="M31 7.104L3 7.101v-2l28 .003z"/></g></svg>
