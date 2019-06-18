@@ -19,8 +19,7 @@ class ProjectCard extends Component {
       <div className="project-card" >
         <MediaQuery minWidth={768}>
           <div className="overlay">
-            <Link to={`/projects/${slug}`}
-              onClick={this.projectClick}>
+            <Link to={`/projects/${slug}`} onClick={this.projectClick} >
               MORE INFO
             </Link>
           </div>

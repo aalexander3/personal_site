@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import '../stylesheets/contact.css'
-
 
 class ContactPage extends Component {
 

@@ -1,0 +1,6 @@
+import './aboutPage.css'
+import './App.css'
+import './contact.css'
+import './index.css'
+import './NavBar.css'
+import './projectPage.css'

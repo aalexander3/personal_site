@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import '../stylesheets/App.css';
-import '../stylesheets/aboutPage.css'
 import HomePage from './HomePage'
 import ProjectPage from './ProjectPage'
 import ProjectDetail from './ProjectDetail'

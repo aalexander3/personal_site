@@ -3,9 +3,7 @@ import { connect } from 'react-redux'
 import { showAbout } from '../actions/actions'
 
 
-const FastFacts = props => {
-  let { showAbout } = props
-
+const FastFacts = { showAbout } => {
   return (
     <div className="about-page">
       FAST FACTS

@@ -13,7 +13,6 @@ class ProjectDetail extends Component {
     this.state.selectedProject.images.forEach(image => {
       const img = new Image();
       img.src = `/images/${image}`
-
     })
   }
 

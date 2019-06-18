@@ -3,16 +3,12 @@ import { connect } from 'react-redux'
 import { toggleAbout } from '../actions/actions'
 import { Icon } from 'antd'
 
-const AboutCard = props => {
-
-  const { bio, bio2 , aboutToggle } = props.about
-  const { toggleAbout } = props
+const AboutCard = ({ about: { bio, bio2 , aboutToggle }, toggleAbout }) => {
 
   const showText = () => {
     return (
       <Fragment>
         <Icon type="close-circle" className="nav-words icons about" onClick={ toggleAbout }  />
-
         <h1>{ bio }</h1>
         <h4>{ bio2 }</h4>
       </Fragment>

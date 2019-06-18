@@ -1,14 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import ProjectCard from './ProjectCard'
-import '../stylesheets/projectPage.css'
 
+const ProjectPage = ({ projects, aboutToggle, navToggle }) => {
 
-const ProjectPage = props => {
-
-  const mappedProjects = props.projects.map(project => <ProjectCard key={project.slug} project={project} />)
-  const rotate = props.aboutToggle ? 'rotate' : ''
-  const left = props.navToggle ? 'toggle-left' : ''
+  const mappedProjects = projects.map(project => <ProjectCard key={project.slug} project={project} />)
+  const rotate = aboutToggle ? 'rotate' : ''
+  const left = navToggle ? 'toggle-left' : ''
 
   return (
     <div className={`project-page ${rotate} ${left}`}>
@@ -20,7 +18,6 @@ const ProjectPage = props => {
 const mapStateToProps = (state) => {
   return {
     projects: state.projects.projects,
-    defaultProj: state.projects.defaultProj,
     aboutToggle: state.about.aboutToggle,
     navToggle: state.nav.toggled
   }

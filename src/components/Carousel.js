@@ -29,7 +29,6 @@ class Carousel extends Component {
         return {
           imageIndex: prevState.imageIndex
         }
-        // return prevState
       } else {
         return {
           imageIndex: prevState.imageIndex + 1
@@ -44,7 +43,6 @@ class Carousel extends Component {
         return {
           imageIndex: prevState.imageIndex
         }
-        // return prevState
       } else {
         return {
           imageIndex: prevState.imageIndex - 1

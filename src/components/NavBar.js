@@ -2,10 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-
 import { Icon } from 'antd'
-import '../stylesheets/NavBar.css'
-
 import { showAbout, toggleAbout, closeAbout, toggleNav } from '../actions/actions'
 
 class NavBar extends Component {
@@ -46,7 +43,7 @@ class NavBar extends Component {
             {toggled ? "AA" : "ARREN ALEXANDER" }
           </span>
         </div>
-        <div onMouseLeave={this.closeNav} className={toggled ? "navbar vertical open" : "navbar vertical"}>
+        <nav onMouseLeave={this.closeNav} className={toggled ? "navbar vertical open" : "navbar vertical"}>
           <div onClick={this.toggleCollapsed} >
             <Icon type="plus-circle" className={toggled ? "nav-words icons toggled" :" nav-words icons not-toggled"} />
           </div>
@@ -65,7 +62,7 @@ class NavBar extends Component {
               : toggled ? <p className="nav-words"> PROJECTS </p>
               : <Icon type="bulb" className="nav-words icons" />}
           </Link>
-        </div>
+        </nav>
       </Fragment>
     )
   }
